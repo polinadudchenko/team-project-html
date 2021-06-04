@@ -1,9 +1,8 @@
 $accent-dark: #d41443;
 $accent-light: #ffa5ba;
 
-/* Насколько хорошая идея так назвать переменные? */
-$black-text-color: #000000;
-$grau-text-color: #907e82;
+$main-text-color: #000000;
+$secondary-text-color: #907e82;
 $white-text-color: #ffffff;
 
 $hero-bg: #ffb8ca;
@@ -12,7 +11,5 @@ $light-bg: #fff5f6;
 
 $main-font: 'DM Sans', sans-serif;
 $title-font: 'Titan One', sans-serif;
-
-$card-set-gap: 20px;
 
 $animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
