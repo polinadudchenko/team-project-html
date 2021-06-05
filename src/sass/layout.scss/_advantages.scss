@@ -1,0 +1,20 @@
+
+.advantages {
+
+}
+
+.advantages__list {
+
+}
+
+.advantages__item {
+    & .p {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 170%;
+
+        color: #000000;
+    }
+}
