@@ -11,10 +11,18 @@
   line-height: 1.31;
 }
 .button--dark {
-  background: $accent-dark;
+  background-color: $accent-dark;
   color: $white-text-color;
+
+  &:hover {
+    background-color: $btn-hvr-dark-bg;
+  }
 }
 .button--light {
-  background: $white-text-color;
+  background-color: $white-text-color;
   color: $accent-dark;
+
+  &:hover {
+    background-color: $btn-hvr-light-bg;
+  }
 }
