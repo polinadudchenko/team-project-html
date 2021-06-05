@@ -9,6 +9,8 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
+
+  transition: $animation;
 }
 .button--dark {
   background-color: $accent-dark;
