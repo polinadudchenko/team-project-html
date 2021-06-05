@@ -10,7 +10,7 @@
   font-size: 16px;
   line-height: 1.31;
 
-  transition: $animation;
+  transition: background-color $animation;
 }
 .button--dark {
   background-color: $accent-dark;
@@ -21,7 +21,7 @@
   }
 }
 .button--light {
-  background-color: $white-text-color;
+  background-color: $btn-light-color;
   color: $accent-dark;
 
   &:hover {
