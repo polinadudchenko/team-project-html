@@ -1,33 +1,46 @@
 .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+
+  font-weight: 500;
+
+  background-color: #fff5f6;
 }
 .about__label {
   margin-bottom: 15px;
-
-  font-size: 18px;
-  line-height: 1.67;
-  text-transform: uppercase;
-
-  color: $accent-light;
 }
 .about__title {
   display: block;
   margin-bottom: 26px;
-
-  font-size: 34px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-
-  color: $accent-dark;
 }
 .about__picture {
   margin-bottom: 46px;
 }
+.about__paragraph {
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
 .about__lead {
-  font-weight: 500;
+  margin-bottom: 28px;
+
   font-size: 12px;
   line-height: 1.62;
 
   color: $main-text-color;
+}
+.about__text {
+  font-size: 12px;
+  line-height: 1.62;
+
+  color: $secondary-text-color;
+}
+.about__text:not(:last-child) {
+  margin-bottom: 7px;
+}
+.about__btn {
+  width: 176px;
 }
