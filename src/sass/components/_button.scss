@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+  border-radius: 22px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  transition: background-color $animation;
+}
+.button--dark {
+  background-color: $accent-dark;
+  color: $white-text-color;
+
+  &:hover {
+    background-color: $btn-hvr-dark-bg;
+  }
+}
+.button--light {
+  background-color: $btn-light-color;
+  color: $accent-dark;
+
+  &:hover {
+    background-color: $btn-hvr-light-bg;
+  }
+}
