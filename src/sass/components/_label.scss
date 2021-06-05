@@ -1,0 +1,16 @@
+.label {
+  font-size: 18px;
+  line-height: 1.17;
+
+  color: $accent-light;
+
+  @include for-tablet {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @include for-desktop {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
