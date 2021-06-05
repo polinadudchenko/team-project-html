@@ -34,3 +34,12 @@
     background-color: $btn-hvr-light-bg;
   }
 }
+.button__icon {
+  margin-left: 13px;
+}
+.button__icon--dark {
+  fill: $accent-dark;
+}
+.button__icon--light {
+  fill: $white-text-color;
+}
