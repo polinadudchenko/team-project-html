@@ -1,0 +1,33 @@
+.about {
+  text-align: center;
+}
+.about__label {
+  margin-bottom: 15px;
+
+  font-size: 18px;
+  line-height: 1.67;
+  text-transform: uppercase;
+
+  color: $accent-light;
+}
+.about__title {
+  display: block;
+  margin-bottom: 26px;
+
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $accent-dark;
+}
+.about__picture {
+  margin-bottom: 46px;
+}
+.about__lead {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+
+  color: $main-text-color;
+}
