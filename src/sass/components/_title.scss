@@ -1,4 +1,19 @@
 .title {
   font-family: $title-font;
   font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $accent-dark;
+
+  @include for-tablet {
+    font-size: 48px;
+  }
+
+  @include for-desktop {
+    font-size: 58px;
+    letter-spacing: 0.06em;
+  }
 }
