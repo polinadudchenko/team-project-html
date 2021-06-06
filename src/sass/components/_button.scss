@@ -38,8 +38,10 @@
   margin-left: 13px;
 }
 .button__icon--dark {
-  fill: $accent-dark;
+  fill: none;
+  stroke: $accent-dark;
 }
 .button__icon--light {
-  fill: $white-text-color;
+  fill: none;
+  stroke: $white-text-color;
 }
