@@ -4,8 +4,6 @@
 }
 
 .advantages__list li {
-    list-style:none;
-
     &:not(:last-child) {
         padding-bottom: 38px;
     }
@@ -14,7 +12,6 @@
 .advantages__item {
     & .advantages__text {
         font-family: "DM Sans";
-        font-style: normal;
         font-weight: bold;
         font-size: 12px;
         line-height: 170%;
@@ -23,18 +20,19 @@
         color: #000000;
     }
     
-    & .advantages__heading {
-        height: 56px;
+    & .advantages__number {
         margin-top: 16px;
 
         font-family: "Titan One";
-        font-style: normal;
-        font-weight: normal;
         font-size: 36px;
-        line-height: 41px;
+        line-height: 1.13;
         letter-spacing: 0.04em;
-        text-transform: uppercase;
 
         color: #D41443;
+
+        &::before {
+            content: "";
+            background-image: url('../images/mobile/advantages/icon1_mobile.png');
+        }
     }
 }
