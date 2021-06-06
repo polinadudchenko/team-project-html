@@ -16,9 +16,9 @@
   }
   /* background-position: 65% 50%; */
   background-repeat: no-repeat;
-  background-position: 80% bottom;
+  background-position: 85% bottom;
   background-image: url('../images/mobile/hero/hero1.png'),
-    radial-gradient(circle at 65% 50%, #ffa5ba 50%, $hero-bg 50%);
+    radial-gradient(circle at 70% 54%, #ffa5ba 49%, $hero-bg 49%);
   /* background-image: radial-gradient(#ffa5ba, $hero-bg); */
 }
 
@@ -56,6 +56,8 @@
 }
 
 .hero__button {
+  padding: 0;
+  margin: 0;
   min-width: 62px;
   font-size: 8px;
   line-height: 1.25;
