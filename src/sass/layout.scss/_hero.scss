@@ -1,11 +1,24 @@
 .hero {
   width: 100%;
   min-height: 500px;
-  /* background-color: $hero-bg; */
-  padding: 193px 30px 160px 30px;
+  padding-top: 193px;
+  padding-bottom: 160px;
+
+  background-repeat: no-repeat;
+  background-position: 85% bottom;
+  background-image: url('../images/mobile/hero/hero1.png'),
+    radial-gradient(circle at 70% 52%, #ffa5ba 54%, $hero-bg 54%);
 
   @include for-tablet {
-    padding: 35px;
+    padding-top: 140px;
+    padding-bottom: 40px;
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-position: 58% bottom, 92% bottom, 35px 90%;
+    background-image: url('../images/mobile/hero/hero1.png'), url('../images/tablet/hero/hero2.png'),
+      url('../images/tablet/hero/hero3.png'),
+      radial-gradient(circle at 60% 50%, #ffa5ba 35%, $hero-bg 24%);
   }
 
   @include for-desktop {
@@ -14,44 +27,52 @@
     max-width: 1280px;
     padding: 115px 60px;
   }
-  /* background-position: 65% 50%; */
-  background-repeat: no-repeat;
-  background-position: 85% bottom;
-  background-image: url('../images/mobile/hero/hero1.png'),
-    radial-gradient(circle at 70% 54%, #ffa5ba 49%, $hero-bg 49%);
-  /* background-image: radial-gradient(#ffa5ba, $hero-bg); */
 }
 
 .hero__title {
+  display: block;
   margin-bottom: 20px;
   width: 218px;
-  font-family: Titan One;
-  font-weight: 400;
+  text-align: left;
   font-size: 48px;
   line-height: 0.965;
-  text-transform: uppercase;
-  color: $accent-dark;
+
+  @include for-tablet {
+    width: 162px;
+    font-size: 34px;
+    line-height: 0.905;
+  }
 
   @include for-desktop {
+    width: 277px;
     margin-bottom: 25px;
+    font-size: 58px;
   }
 }
 
 .hero__title--white {
-  font-family: Titan One;
-  font-weight: 400;
+  display: inline-block;
+
   font-size: 26px;
   line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   color: $white-text-color;
+
+  @include for-tablet {
+    font-size: 22px;
+    line-height: 1.136;
+  }
+
+  @include for-desktop {
+    font-size: 38px;
+    line-height: 1.16;
+  }
 }
 
-.hero__anchors {
+.hero__links {
   display: flex;
 }
 
-.hero__btn:not(:last-child) {
+.hero__anchor:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -59,18 +80,94 @@
   padding: 0;
   margin: 0;
   min-width: 62px;
+  height: 24px;
   font-size: 8px;
   line-height: 1.25;
 }
+.hero__button--about {
+  width: 82px;
+}
 
-.hero__text {
+.hero-flex {
+  @include for-tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+.hero__branches {
   display: none;
+
+  @include for-tablet {
+    display: block;
+    position: absolute;
+    top: 140px;
+    right: 35px;
+  }
+}
+
+.hero__branches-item {
+  width: 50px;
+  position: relative;
+  z-index: 1;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    left: 40px;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}
+
+.hero__branches-type {
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: right;
+  color: $white-text-color;
+}
+
+.hero__number {
+  font-family: 'Titan One';
+  font-size: 28px;
+  line-height: 1.14;
+  color: $accent-dark;
+}
+
+.hero__modal {
+  display: none;
+
+  @include for-tablet {
+    position: absolute;
+    bottom: 60px;
+    left: 160px;
+    display: block;
+  }
+}
+
+.hero__modal-text {
+  margin-bottom: 7px;
+  width: 130px;
+  font-size: 8px;
+  line-height: 1.5;
+  color: $white-text-color;
 }
 
 .hero__modal-btn {
   display: none;
-}
 
-.hero__numbers {
-  display: none;
+  @include for-tablet {
+    display: block;
+  }
 }
