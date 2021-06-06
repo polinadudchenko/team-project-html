@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 
   padding-top: 125px;
   padding-bottom: 20px;
@@ -10,45 +9,149 @@
   font-weight: 500;
 
   background-color: #fff5f6;
+  background-image: url('../images/mobile/about/bg-milk.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 81px;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/mobile/about/bg-milk@2x.png');
+  }
+
+  @include for-tablet {
+    padding-bottom: 33px;
+
+    background-image: url('../images/tablet/about/about.png'),
+      url('../images/tablet/about/bg-milk.png');
+    background-size: 340px 339px, contain;
+    background-repeat: no-repeat;
+    background-position: left 35px top 281px, left 0 top 320px;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/tablet/about/about@2x.png'),
+        url('../images/tablet/about/bg-milk@2x.png');
+    }
+  }
+
+  @include for-desktop {
+    padding-bottom: 73px;
+
+    background-image: url('../images/desktop/about/about.png'),
+      url('../images/desktop/about/bg-milk.png');
+    background-size: 516px 516px, contain;
+    background-repeat: no-repeat;
+    background-position: left 115px top 295px, left 0 top 342px;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/about/about@2x.png'),
+        url('../images/desktop/about/bg-milk@2x.png');
+    }
+  }
 }
 .about__label {
   margin-bottom: 15px;
 }
 .about__title {
-  display: block;
   margin-bottom: 26px;
-}
-.about__picture {
-  margin-bottom: 46px;
+
+  @include for-tablet {
+    margin-bottom: 100px;
+  }
+
+  @include for-desktop {
+    margin-bottom: 106px;
+  }
 }
 .about__paragraph {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   width: 220px;
   margin-left: auto;
   margin-right: auto;
+
   text-align: left;
+  letter-spacing: 0;
+  font-size: 12px;
+  line-height: 1.62;
+
+  @include for-tablet {
+    margin-right: 0;
+    width: 340px;
+
+    letter-spacing: 0.04;
+    font-size: 14px;
+    line-height: 1.76;
+  }
+
+  @include for-desktop {
+    width: 463px;
+  }
 }
 .about__lead {
   margin-bottom: 28px;
 
-  font-size: 12px;
-  line-height: 1.62;
-
   color: $main-text-color;
+
+  @include for-desktop {
+    margin-bottom: 35px;
+
+    font-size: 16px;
+  }
+}
+.about__paragraph::before {
+  content: '';
+  display: flex;
+  align-self: center;
+  width: 280px;
+  height: 279px;
+  margin-bottom: 46px;
+  background-image: url('../images/mobile/about/about.png');
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/mobile/about/about@2x.png');
+  }
+
+  @include for-tablet {
+    display: none;
+  }
 }
 .about__text {
-  font-size: 12px;
-  line-height: 1.62;
-
   color: $secondary-text-color;
+  line-height: 1.94;
 }
-.about__text:not(:last-child) {
+.about__text:nth-child(2) {
   margin-bottom: 7px;
+
+  @include for-desktop {
+    margin-bottom: 25px;
+  }
+}
+.about__text:nth-child(3) {
+  margin-bottom: 18px;
+
+  @include for-tablet {
+    margin-bottom: 55px;
+  }
+
+  @include for-desktop {
+    margin-bottom: 35px;
+  }
 }
 .about__btn {
   width: 176px;
-}
-.about__icon {
-  margin-left: 13px;
-
-  fill: $accent-dark;
 }
