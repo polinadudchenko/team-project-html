@@ -1,6 +1,6 @@
 
 .advantages {
-    background: #FFF5F6;
+    background-color: $light-bg;
 }
 
 .advantages__list li {
@@ -9,30 +9,31 @@
     }
 }
 
-.advantages__item {
-    & .advantages__text {
-        font-family: "DM Sans";
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 170%;
-        padding-right: 70px;
+.advantages__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    padding-right: 15px;
         
-        color: #000000;
+    color: $main-text-color;
     }
-    
-    & .advantages__number {
-        margin-top: 16px;
 
-        font-family: "Titan One";
-        font-size: 36px;
-        line-height: 1.13;
-        letter-spacing: 0.04em;
+.advantages__number {
+    margin-top: 16px;
 
-        color: #D41443;
+    font-family: "Titan One";
+    font-size: 36px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
 
-        &::before {
-            content: "";
-            background-image: url('../images/mobile/advantages/icon1_mobile.png');
-        }
+    color: $accent-dark;
+
+    &::before {
+        display: block;
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/mobile/advantages/icon1_mobile.png);
+        background-repeat: no-repeat;
     }
 }
