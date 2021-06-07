@@ -5,19 +5,19 @@
 
 .advantages__list { 
 
-    li {
-        &:not(:last-child) {
-            padding-bottom: 38px;
-        }
-
-        @include for-tablet {
-            margin-left: 60px;
-        }
-    }
-
     @include for-tablet {
         display: flex;
         margin-left: -60px;
+    }
+}
+
+.advantages__item {
+    &:not(:last-child) {
+        padding-bottom: 38px;
+    }
+
+    @include for-tablet {
+        margin-left: 60px;
     }
 }
 
@@ -37,7 +37,7 @@
 .advantages__number {
     margin-bottom: 15px;
 
-    font-family: "Titan One";
+    font-family: $title-font;
     font-size: 36px;
     line-height: 1.13;
     letter-spacing: 0.04em;
@@ -74,11 +74,6 @@
     background-image: url('../images/mobile/advantages/icon3_mobile.png');
     background-repeat: no-repeat;
 }
-
-// @include for-tablet {
-//     font-size: 26px;
-//     line-height: 1.15;
-//   }
 
 //   @include for-desktop {
 //     font-size: 30px;
