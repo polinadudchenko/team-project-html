@@ -1,0 +1,109 @@
+.footer {
+  width: 320px;
+  background-color: $light-bg;
+  padding-top: 0;
+  margin-top: 0;
+}
+.footer__text {
+  width: 234px;
+  margin-left: 20px;
+  padding-bottom: 43px;
+}
+.footer__text-first {
+  font-family: $title-font;
+  width: 232px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.16;
+  text-transform: uppercase;
+  color: $accent-light;
+  padding-bottom: 17px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer__text-second {
+  font-family: $title-font;
+  width: 200px;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-dark;
+  margin-top: 0;
+}
+
+.footer__socials {
+  width: 320px;
+  padding-bottom: 43px;
+}
+
+.footer__socials-icons {
+  display: inline-flex;
+  margin-left: 147px;
+  margin-right: 20px;
+  padding-bottom: 46px;
+}
+
+.footer__socials-item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.footer__socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fea5bb;
+  transition: background-color $animation;
+}
+
+.footer__socials-link:hover,
+.footer__socials-link:focus {
+  background-color: $accent-dark;
+  transition: background-color $animation;
+}
+
+.footer__socials-link:hover .footer__socials-svg {
+  transition: fill $animation;
+}
+
+.footer__socials-svg {
+  fill: $white-text-color;
+  transition: fill $animation;
+}
+.footer__text-contacts {
+  width: 320px;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.footer__text-tell {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.83;
+  color: $main-text-color;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 0;
+}
+.footer__text-number {
+  color: $accent-dark;
+}
+.footer__text-copyright {
+  font-family: $main-font;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: $secondary-text-color;
+  margin-top: 0;
+  margin-bottom: 0;
+}
