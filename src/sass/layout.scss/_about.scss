@@ -1,15 +1,10 @@
 .about {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff5f6;
-}
-.about__container {
   padding-top: 125px;
   padding-bottom: 20px;
 
   font-weight: 500;
 
+  background-color: $light-bg;
   background-image: url('../images/mobile/about/bg-milk.png');
   background-size: contain;
   background-repeat: no-repeat;
