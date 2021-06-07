@@ -20,14 +20,13 @@
 .products__item{
         border-radius: 24px;
 }
-.proudcts__item-name{
+.products__item-name{
     position: relative;
     padding-top: 161px;
     font-size: 20px;
     line-height: 1.15;
     font-weight: 400;
     font-family: Titan One, sans-serif;
-    text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $white-text-color;
@@ -37,7 +36,7 @@
     line-height: 1.13;
     }
 }
-.proudcts__item-name::after{
+.prouducts__item-name::after{
     content: '';
     background-image: url('../images/mobile/products/circle@2x.png');
     background-position: center;
