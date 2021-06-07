@@ -23,7 +23,6 @@
     }
 
 .advantages__number {
-    margin-top: 15px;
     margin-bottom: 15px;
 
     font-family: "Titan One";
@@ -34,29 +33,32 @@
     color: $accent-dark;
 }
 
-.first__img::before {
+.advantages__item--first::before {
     display: block;
     content: "";
     width: 33px;
     height: 50px;
-    background-image: url(../images/mobile/advantages/icon1_mobile.png);
+    margin-bottom: 15px;
+    background-image: url('../images/mobile/advantages/icon1_mobile.png');
     background-repeat: no-repeat;
 }
 
-.second__img::before {
+.advantages__item--second::before {
     display: block;
     content: "";
     width: 50px;
     height: 50px;
-    background-image: url(../images/mobile/advantages/icon2_mobile.png);
+    margin-bottom: 15px;
+    background-image: url('../images/mobile/advantages/icon2_mobile.png');
     background-repeat: no-repeat;
 }
 
-.third__img::before {
+.advantages__item--third::before {
     display: block;
     content: "";
     width: 46px;
     height: 50px;
-    background-image: url(../images/mobile/advantages/icon3_mobile.png);
+    margin-bottom: 15px;
+    background-image: url('../images/mobile/advantages/icon3_mobile.png');
     background-repeat: no-repeat;
 }
