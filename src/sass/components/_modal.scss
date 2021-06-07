@@ -1,0 +1,61 @@
+.backdrop {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: $modal-backdrop-bg;
+
+  transition: opacity $animation, visibility $animation, transform $animation;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+
+  width: 85vw;
+  max-height: 450px;
+
+  @include for-phone {
+    max-width: 450px;
+    padding: 20px;
+  }
+  @include for-tablet {
+    max-width: 700px;
+    max-height: 700px;
+    padding: 40px;
+  }
+
+  padding: 10px;
+
+  background-color: $light-bg;
+  box-shadow: $modal-box-shadow;
+  border-radius: 4px;
+}
+.modal__btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background-color: $light-bg;
+
+  transition: background-color $animation, stroke $animation;
+
+  &:hover,
+  &:focus {
+    stroke: $btn-hvr-dark-bg;
+    background-color: $btn-hvr-light-bg;
+  }
+}
+.modal__icon-close {
+  stroke: $accent-dark;
+}
