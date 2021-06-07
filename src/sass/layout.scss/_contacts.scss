@@ -1,19 +1,57 @@
 .contacts{
 background-color: $light-bg;
-background-image: url(../images/desktop/contacts/bg-points.png);
-background-repeat: no-repeat;
-// background-size: cover;
+padding-bottom: 57px;
+
+    @include for-desktop{
+        background-image: url(../images/desktop/contacts/bg-points.png);
+        background-image: url(../images/desktop/contacts/bg-points@2x.png);
+        background-repeat: no-repeat;
+    }
+}
+
+.container{
+    width: 100%;
+
+    @include for-phone{
+        max-width: 480px;
+    }
+
+    @include for-tablet{
+        max-width: 768px;
+    }
+
+    @include for-desktop{
+        max-width: 1280px;
+    }
 }
 
 .contacts__list{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 54px;
+
+    @include for-tablet{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-right: -20px;
+        margin-bottom: 81px;
+    } 
+    
+    @include for-desktop{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-right: -31px;
+        margin-bottom: 86px;
+    }
 }
 
 .contacts__item{
-    width: 100%;
+    width: 220px;
+    height: 427px;
     padding: 43px 20px;
-    // margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -22,62 +60,79 @@ background-repeat: no-repeat;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;  
 
+    @include for-tablet{
+        flex-basis: calc((100% - 20px * 3) /3);
+        width: 220px;
+        height: 544px;
+        padding: 50px 31px;
+    }
+    @include for-desktop{
+        width: 330px;
+        flex-basis: calc((100% - 31px * 3) /3);
+        margin-right: 31px;
+        margin-bottom: 86px;
+    }
 }
 
-.contacts__item:last-child{
-    margin-bottom: 54px;
-}
 
 .contacts__type{
-    font-family: DM Sans;
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 22px;  
+    line-height: 1.83;  
     letter-spacing: 0.04em;
     text-transform: uppercase;
     background-color: #F0D1A5;
     color:$white-text-color;
     width: 80px;
-    height: 16px;
     border-radius: 4px;
     align-items: center;
     text-align: center;
     letter-spacing: 0.04em;
     margin-bottom: 25px;
+    
+
+    @include for-tablet{
+        font-size: 16px;
+    }
 }
 
 .contacts__type--background{
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 22px;  
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
     background-color: #C2E297;
-    color:$white-text-color;
-    width: 130px;
-    height: 16px;  
-    border-radius: 4px;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.04em;
-    margin-bottom: 25px;
+    width: 138px; 
+    
+
+    @include for-tablet{
+        font-size: 16px;
+    }
 }
 
 .contacts__location,
 .contacts__work-days{
     color: $main-text-color;
+    font-size: 12px;
+    line-height: 1.83;
     font-weight: 500;
+
+    @include for-tablet{
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
+    @include for-desktop{
+        font-size: 16px;
+        line-height: 1.87;
+    }
 }
 
 .contacts__work-days{
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .contacts__working-hours{
-    color: #FFA5BA;
+    color: $accent-light;
+    font-size: 12px;
+    line-height: 1.83;
+    font-weight: 500;
 }
 
 .contacts__location{
@@ -86,37 +141,85 @@ background-repeat: no-repeat;
 
 .contacts__text{
     color: $secondary-text-color;
-    line-height: 18px;
-    width: 100%;
-    margin-bottom: 25px;
+    font-size: 12px;
+    line-height: 1.5;
+    width: 179px;
+
+    @include for-tablet{
+        width: 145px;
+        font-size: 14px;
+        line-height: 1.64;
+    }
+
+    @include for-desktop{
+        width: 243px;
+        font-size: 16px;
+        line-height: 1.81;
+    }
 }
 
 .contacts__text::after{
     content: "";
-    width: 100%;
+    width: 179px;
     margin-top: 25px;
     height: 0px;
     display: block;
     border: 1px solid #E1E1E1;
+    background-color: #E1E1E1;
+
+    @include for-tablet{
+        width: 157px;
+    }
+
+    @include for-desktop{
+        width: 234px;
+    }
 }
 
+.contact-info{
+    font-size: 12px;
+    line-height: 1.5;
+
+    @include for-tablet{
+        font-size: 14px;
+        line-height: 1.85;
+    }
+}
 .contact-info__item{
     color: $secondary-text-color;
 }
 
 .contact-info::before{
     content: "";
-    width: 100%;
+    width: 179px;
     margin-top: 25px;
     margin-bottom: 25px;
     height: 0px;
     display: block;
     border: 1px solid #E1E1E1; 
+    background-color: #E1E1E1;
+
+    @include for-tablet{
+        width: 157px;
+    }
+
+    @include for-desktop{
+        width: 234px;
+    }
 }
 
 .more-info{
-    margin-left: auto;
-    margin-right: auto;
+    @include for-tablet{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.more-info__item{
+    @include for-tablet{
+        margin-right: 15px;
+    }
 }
 
 .more-info__item .button--dark,
@@ -127,4 +230,8 @@ background-repeat: no-repeat;
 
 .more-info__item .button--dark{
     margin-bottom: 10px;
+
+    @include for-tablet{
+        margin-bottom: 0;
+    }
 }
