@@ -125,23 +125,16 @@
 }
 
 .hero__button {
-  width: 62px;
+  min-width: 62px;
   height: 24px;
   font-size: 8px;
   line-height: 1.25;
 
   @include for-desktop {
-    width: 104px;
+    min-width: 104px;
     height: 40px;
     font-size: 14px;
     line-height: 1.29;
-  }
-}
-.hero__button--about {
-  width: 90px;
-
-  @include for-desktop {
-    width: 138px;
   }
 }
 
@@ -198,7 +191,7 @@
 
       position: absolute;
       z-index: -1;
-      top: -30px;
+      top: -6px;
       left: 80px;
 
       width: 30px;
@@ -232,11 +225,11 @@
   }
   @include for-desktop {
     font-size: 46px;
-    line-height: 1.152px;
+    line-height: 1.15;
   }
 }
 
-.hero__modal {
+.hero__about {
   display: none;
 
   @include for-tablet {
@@ -252,7 +245,7 @@
   }
 }
 
-.hero__modal-text {
+.hero__about-text {
   margin-bottom: 7px;
   width: 130px;
   font-size: 8px;
@@ -270,19 +263,15 @@
   fill: $accent-dark;
 }
 
-.hero__modal-btn {
+.hero__about-btn {
   display: none;
 
   @include for-tablet {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background-color: $btn-light-color;
   }
 
   @include for-desktop {
