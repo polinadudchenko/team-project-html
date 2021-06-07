@@ -16,30 +16,9 @@
 }
 .products__list{
     text-align: center;
-    @include for-tablet{
-      display: flex;
-      flex-wrap: nowrap;
-      margin-right: -20px;
-  }
-      @include for-desktop{
-          margin-right: -30px;
-      }
-    }
+}
 .products__item{
         border-radius: 24px;
-      @include only-phone {
-        &:not(:last-child) {
-            margin-bottom: 130px;
-      }
-    }
-      @include for-tablet{
-        flex-basis: calc((100% - 20px * 3) / 3);
-        margin-right: 20px;
-        }
-        @include for-desktop{
-        flex-basis: calc((100% - 30px * 3) / 3);
-        margin-right: 30px;
-        }
 }
 .proudcts__item-name{
     position: relative;
