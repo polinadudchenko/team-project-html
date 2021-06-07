@@ -1,14 +1,21 @@
 .main-nav {
     position: relative;
+    background: $hero-bg;
+    // Это я временно цвет поставила, потом надо будет transparent
   
-    @include for-tablet {
+    @include for-desktop {
       display: flex;
-      align-items: center;
     }
   }
   .main-nav__logo {
       display: inline-block;
       padding-top: 6px;
+
+      @include for-desktop {
+        padding-top: 37px;
+        margin-left: -70px;
+        margin-right: 100px;
+      }
   }
   .main-nav__open-button {
     position: absolute;
@@ -22,7 +29,7 @@
     background-color: transparent;
     cursor: pointer;
   
-    @include for-tablet {
+    @include for-desktop {
       display: none;
     }
   }
@@ -62,16 +69,12 @@
     display: flex;
     z-index: 1;
     padding: 60px 0;
-  
-    @include for-tablet {
-      align-items: center;
-    }
-  
-    @include only-phone {
-      position: absolute;
+
+    @include phone-and-tablet {
+    position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
+      right: 0;
+      width: 250px;
       height: 100vh;
   
       flex-direction: column;
@@ -90,16 +93,35 @@
         opacity: 1;
         visibility: visible;
         pointer-events: initial;
-      }
     }
+    }
+
+    @include for-desktop {
+        padding: 0;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
   }
   .site-nav {
       color: $white-text-color;
+
+      @include for-desktop {
+          display: flex;
+      }
   }
   .main-nav__button {
-      width: 210px;
-      height: 44px;
-      margin: 0 auto 20px;
+    width: 210px;
+    height: 44px;
+    margin: 0 auto 20px;
+
+    font-weight: 700;
+    line-height: 1.31;
+
+    @include for-desktop {
+        width: 159px;
+        margin: 38px 0 0;
+    }
   }
   .site-nav__current {
       color: $accent-dark;
@@ -107,8 +129,26 @@
   .site-nav__item {
     padding: 12px 21px;
     border-top: 1px solid #E18298;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
 
     &:last-child {
         border-bottom: 1px solid #E18298;
+    }
+
+    @include for-desktop {
+        padding: 50px 0 0;
+
+        &:not(:last-child) {
+            padding-right: 35px;
+        }
+        border: none;
+        font-size: 16px;
+        line-height: 1.31;
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
   }
