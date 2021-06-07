@@ -1,0 +1,81 @@
+
+.advantages {
+    background-color: $light-bg;
+}
+
+.advantages__list { 
+
+    @include for-tablet {
+        display: flex;
+        margin-left: -60px;
+    }
+}
+
+.advantages__item {
+    &:not(:last-child) {
+        padding-bottom: 38px;
+    }
+
+    @include for-tablet {
+        margin-left: 60px;
+    }
+}
+
+.advantages__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+        
+    color: $main-text-color;
+
+    @include for-tablet {
+        width: 180px;
+        height: 67px;
+    }
+}
+
+.advantages__number {
+    margin-bottom: 15px;
+
+    font-family: $title-font;
+    font-size: 36px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+
+    color: $accent-dark;
+}
+
+.advantages__item--first::before {
+    display: block;
+    content: "";
+    width: 33px;
+    height: 50px;
+    margin-bottom: 15px;
+    background-image: url('../images/mobile/advantages/icon1_mobile.png');
+    background-repeat: no-repeat;
+}
+
+.advantages__item--second::before {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    background-image: url('../images/mobile/advantages/icon2_mobile.png');
+    background-repeat: no-repeat;
+}
+
+.advantages__item--third::before {
+    display: block;
+    content: "";
+    width: 46px;
+    height: 50px;
+    margin-bottom: 15px;
+    background-image: url('../images/mobile/advantages/icon3_mobile.png');
+    background-repeat: no-repeat;
+}
+
+//   @include for-desktop {
+//     font-size: 30px;
+//     line-height: 1.13;
+//   }
