@@ -4,12 +4,20 @@
 }
 
 .advantages__list { 
-    margin-left: 20px;
 
     li {
         &:not(:last-child) {
             padding-bottom: 38px;
         }
+
+        @include for-tablet {
+            margin-left: 60px;
+        }
+    }
+
+    @include for-tablet {
+        display: flex;
+        margin-left: -60px;
     }
 }
 
@@ -17,10 +25,14 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 1.7;
-    padding-right: 15px;
         
     color: $main-text-color;
+
+    @include for-tablet {
+        width: 180px;
+        height: 67px;
     }
+}
 
 .advantages__number {
     margin-bottom: 15px;
@@ -62,3 +74,13 @@
     background-image: url('../images/mobile/advantages/icon3_mobile.png');
     background-repeat: no-repeat;
 }
+
+// @include for-tablet {
+//     font-size: 26px;
+//     line-height: 1.15;
+//   }
+
+//   @include for-desktop {
+//     font-size: 30px;
+//     line-height: 1.13;
+//   }
