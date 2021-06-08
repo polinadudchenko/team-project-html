@@ -254,28 +254,58 @@ padding-bottom: 57px;
     height: 100%;
     background-color: rgba(255, 165, 186, 0.8);
     overflow-y: scroll;
-    padding: 250px;
+    padding: 40px 40px;
+
+    @include for-phone{
+        padding: 57px 57px;
+    }
+
+    @include for-tablet{
+        padding: 65px 95px;
+    }
+
+    @include for-desktop{
+        padding: 65px 180px; 
+    }
 }
 
 .location-modal{
-    background-color: $light-bg;
+    background-color: #fff5f6;
+    position: relative;
+    z-index: 2;
+
+    @include for-desktop{
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .location-modal__image{
-    height: 300px;
+    height: auto;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    
+
+    @include for-tablet{
+        height: 300px;
+        margin-bottom: 30px;
+    }
 }
 
 .location-modal__button {
     position: absolute;
-    top: 260px;
-    left: 260px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     border: transparent;
-    background-color: pink;
+    background-color: white;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 .location-modal__icon {
@@ -283,11 +313,21 @@ padding-bottom: 57px;
 }
 
 .location-modal__text{
-    font-size: 30px;
+    font-size: 15px;
     line-height: 1.13;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    @include for-tablet{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    @include for-desktop{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
 }
 
 .location-modal__city{
@@ -297,7 +337,21 @@ padding-bottom: 57px;
 }
 
 .location-modal__maps{
-    margin-bottom: 20px;
-    border: 5px solid $accent-light;
+    width: 221px;
+    height: 221px;
+    margin-bottom: 10px;
+    border: 2px solid #ffa5ba;
+    overflow: hidden;
+    
+
+    @include for-phone{
+        width: 300px;
+        overflow: hidden;
+    }
+
+    @include for-tablet{
+        width: 276px;
+    }
+    
 }
 
