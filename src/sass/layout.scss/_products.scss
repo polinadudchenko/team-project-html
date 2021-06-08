@@ -19,6 +19,7 @@
 }
 .products__item{
         border-radius: 24px;
+        position: relative;
 }
 .products__item-name{
     position: relative;
@@ -74,18 +75,7 @@
 .hero__icon {
     fill: $accent-dark;
   }
-  .products__item-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background-color: $btn-light-color;
-    margin-bottom: 40px;
-    @include for-desktop {
-      margin-bottom: 50px;
-    }
-  }
+  
 .products__item--pink{
     background-color: $hero-bg;
 }
@@ -93,7 +83,7 @@
     background-color: #F0D1A5;
 }
 .products__item--green{
-    background-color: #C2E297
+    background-color: #C2E297;
 }
 %image-before{
     content: '';
@@ -194,5 +184,18 @@
         (min-resolution: 2dppx) {
         background-image: url('../images/desktop/products/product3@2x.png');
     }
+    }
+    }
+    .products__item-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background-color: $btn-light-color;
+        margin-bottom: 40px;
+        transition: background-color $animation;
+        @include for-desktop {
+          margin-bottom: 50px;
     }
     }

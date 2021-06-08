@@ -1,7 +1,7 @@
 .card-set__list{
     @include for-tablet{
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         margin-right: -20px;
     }
         @include for-desktop{
