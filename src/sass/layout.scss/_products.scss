@@ -19,6 +19,11 @@
 }
 .products__item{
         border-radius: 24px;
+        position: relative;
+        @include only-phone {
+            &:not(:last-child) {
+                margin-bottom: 130px;
+          }}
 }
 .products__item-name{
     position: relative;
@@ -74,18 +79,7 @@
 .hero__icon {
     fill: $accent-dark;
   }
-  .products__item-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background-color: $btn-light-color;
-    margin-bottom: 40px;
-    @include for-desktop {
-      margin-bottom: 50px;
-    }
-  }
+  
 .products__item--pink{
     background-color: $hero-bg;
 }
@@ -93,7 +87,7 @@
     background-color: #F0D1A5;
 }
 .products__item--green{
-    background-color: #C2E297
+    background-color: #C2E297;
 }
 %image-before{
     content: '';
@@ -196,3 +190,44 @@
     }
     }
     }
+    .products__item-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background-color: $btn-light-color;
+        margin-bottom: 40px;
+        transition: background-color $animation;
+        @include for-desktop {
+          margin-bottom: 50px;
+    }
+    }
+.sub-text{
+    position: absolute;
+    display: none;
+    border-radius: 24px;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    color: $white-text-color;
+    
+    top: 31%;
+    width: 100%;
+    height: 50%;
+    @include for-tablet{
+        line-height: 1.7;
+        padding: 10px 7px;
+        top: 24%;
+        height: 60%;
+        }
+        @include for-desktop{
+            font-size: 16px;
+            padding: 20px;
+            top: 21%;
+            height: 60%;
+        }
+}

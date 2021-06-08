@@ -1,0 +1,83 @@
+.backdrop {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 15px 15px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: visibility $animation, opacity $animation;
+
+  .buy-modal {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+  }
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+
+  max-width: 450px;
+  width: 100%;
+
+  max-height: 100vh;
+  padding: 40px;
+  overflow-y: auto;
+
+  background-color: $light-bg;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform $animation, opacity $animation;
+
+  @include for-desktop {
+    max-width: 528px;
+  }
+}
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  stroke: $accent-dark;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  background-color: $btn-light-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: stroke $animation;
+
+  &:hover,
+  &:focus {
+    stroke: $accent-light;
+  }
+}
+.modal__title {
+  color: $accent-dark;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 0.95;
+  text-align: center;
+  margin-bottom: 12px;
+}
