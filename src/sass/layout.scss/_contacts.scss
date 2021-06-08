@@ -65,12 +65,13 @@ padding-bottom: 57px;
         width: 220px;
         height: 544px;
         padding: 50px 31px;
+        margin-bottom: 0;
     }
     @include for-desktop{
         width: 330px;
         flex-basis: calc((100% - 31px * 3) /3);
         margin-right: 31px;
-        margin-bottom: 86px;
+        margin-bottom: 0;
     }
 }
 
@@ -124,9 +125,9 @@ padding-bottom: 57px;
     }
 }
 
-.contacts__work-days{
-    padding: 10px 0;
-}
+// .contacts__work-days{
+//     padding: 10px 0;
+// }
 
 .contacts__working-hours{
     color: $accent-light;
@@ -162,6 +163,7 @@ padding-bottom: 57px;
     content: "";
     width: 179px;
     margin-top: 25px;
+    margin-bottom: 25px;
     height: 0px;
     display: block;
     border: 1px solid #E1E1E1;
@@ -235,3 +237,67 @@ padding-bottom: 57px;
         margin-bottom: 0;
     }
 }
+
+.contact-button{
+    width: 161px;
+    @include for-tablet{
+        width: 191px;
+    }
+}
+
+.location-backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 186, 0.8);
+    overflow-y: scroll;
+    padding: 250px;
+}
+
+.location-modal{
+    background-color: $light-bg;
+}
+
+.location-modal__image{
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.location-modal__button {
+    position: absolute;
+    top: 260px;
+    left: 260px;
+    border-radius: 50%;
+    border: transparent;
+    background-color: pink;
+    width: 30px;
+    height: 30px;
+}
+
+.location-modal__icon {
+    stroke: black;
+}
+
+.location-modal__text{
+    font-size: 30px;
+    line-height: 1.13;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.location-modal__city{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.location-modal__maps{
+    margin-bottom: 20px;
+    border: 5px solid $accent-light;
+}
+
