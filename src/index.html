@@ -25,18 +25,14 @@
     <script src="./index.js"></script>
     <script src="./js/mobile-menu.js"></script>
     <script>
-      ;(() => {
-        document
-          .querySelector('.js-speaker-form')
-          .addEventListener('submit', e => {
-            e.preventDefault()
+      (() => {
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+          e.preventDefault();
 
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`),
-            )
-            e.currentTarget.reset()
-          })
-      })()
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+          e.currentTarget.reset();
+        });
+      })();
     </script>
   </body>
 </html>
