@@ -65,13 +65,13 @@ padding-bottom: 57px;
         width: 220px;
         height: 544px;
         padding: 50px 31px;
-        margin-bottom: 0;
+        
     }
     @include for-desktop{
         width: 330px;
         flex-basis: calc((100% - 31px * 3) /3);
         margin-right: 31px;
-        margin-bottom: 0;
+        
     }
 }
 
