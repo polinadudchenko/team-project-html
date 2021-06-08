@@ -5,21 +5,9 @@
     padding-bottom: 70px;
 }
 
-.advantages__list { 
-
-    @include for-tablet {
-        display: flex;
-        margin-left: -60px;
-    }
-}
-
 .advantages__item {
     &:not(:last-child) {
         padding-bottom: 38px;
-    }
-
-    @include for-tablet {
-        margin-left: 60px;
     }
 }
 
