@@ -199,3 +199,31 @@
           margin-bottom: 50px;
     }
     }
+.read{
+    position: absolute;
+    display: none;
+    border-radius: 24px;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    color: $white-text-color;
+    
+    top: 30%;
+    width: 100%;
+    height: 50%;
+    @include for-tablet{
+        line-height: 1.7;
+        padding: 10px 7px;
+        top: 23%;
+        height: 60%;
+        }
+        @include for-desktop{
+            font-size: 16px;
+            padding: 20px;
+            top: 20%;
+            height: 60%;
+        }
+}
