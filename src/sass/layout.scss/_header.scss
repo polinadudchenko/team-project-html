@@ -1,154 +1,202 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-phone {
+    max-width: 480px;
+  }
+
+  @include for-tablet {
+    max-width: 768px;
+  }
+
+  @include for-desktop {
+    max-width: 1280px;
+  }
+}
 .main-nav {
-    position: relative;
-    background: $hero-bg;
-    // Это я временно цвет поставила, потом надо будет transparent
-  
-    @include for-desktop {
-      display: flex;
-    }
-  }
-  .main-nav__logo {
-      display: inline-block;
-      padding-top: 6px;
+  display: flex;
+  position: relative;
+  background: transparent;
 
-      @include for-desktop {
-        padding-top: 37px;
-        margin-left: -70px;
-        margin-right: 100px;
-      }
+  @include for-desktop {
+    display: flex;
   }
-  .main-nav__open-button {
-    position: absolute;
-    top: 23px;
-    right: 20px;
-    z-index: 2;
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  
-    @include for-desktop {
-      display: none;
-    }
-  }
-  .main-nav__svg {
-      width: 21px;
-      height: 14px;
+}
+.main-nav__logo {
+  display: inline-block;
+  padding-top: 6px;
 
-      .main-nav__open-button.is-open & {
-      width: 17px;
-      height: 17px;
-      }
+  @include for-tablet {
+    padding-top: 13px;
   }
-  .main-nav__close {
-    stroke: $btn-light-color;
-  
+
+  @include for-desktop {
+    padding-top: 37px;
+    margin-left: -70px;
+    margin-right: 100px;
+  }
+}
+.main-nav__open-button {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  z-index: 3;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include for-tablet {
+    top: 30px;
+    right: 225px;
+  }
+
+  @include for-desktop {
+    display: none;
+  }
+}
+.main-nav__svg {
+  width: 21px;
+  height: 14px;
+
+  .main-nav__open-button.is-open & {
+    width: 17px;
+    height: 17px;
+  }
+}
+.main-nav__close {
+  stroke: $btn-light-color;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: visibility $animation, opacity $animation, stroke $animation;
+
+  .main-nav__open-button.is-open & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.main-nav__open {
+  stroke: $accent-dark;
+
+  transition: visibility $animation, opacity $animation, stroke $animation;
+
+  .main-nav__open-button.is-open & {
     opacity: 0;
     visibility: hidden;
-  
-    transition: visibility $animation, opacity $animation, stroke $animation;
-  
-    .main-nav__open-button.is-open & {
+  }
+}
+.main-nav__menu {
+  display: flex;
+  padding: 60px 0;
+
+  @include phone-and-tablet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+
+    flex-direction: column;
+
+    background-color: $mobile-menu-bg;
+
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity $animation, visibility $animation, transform $animation;
+
+    &.is-open {
+      transform: translateY(0);
       opacity: 1;
       visibility: visible;
+      pointer-events: initial;
     }
   }
-  .main-nav__open {
-    stroke: $accent-dark;
-  
-    transition: visibility $animation, opacity $animation, stroke $animation;
-  
-    .main-nav__open-button.is-open & {
-      opacity: 0;
-      visibility: hidden;
-    }
+
+  @include for-desktop {
+    padding: 0;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-grow: 1;
   }
-  .main-nav__menu {
+}
+.site-nav {
+  color: $white-text-color;
+
+  @include for-desktop {
     display: flex;
-    z-index: 1;
-    padding: 60px 0;
-
-    @include phone-and-tablet {
-    position: absolute;
-      top: 0;
-      right: 0;
-      width: 250px;
-      height: 100vh;
-  
-      flex-direction: column;
-  
-      background-color: $mobile-menu-bg;
-  
-      transform: translateY(-100%);
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-  
-      transition: opacity $animation, visibility $animation, transform $animation;
-  
-      &.is-open {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-        pointer-events: initial;
-    }
-    }
-
-    @include for-desktop {
-        padding: 0;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        flex-grow: 1;
-      }
   }
-  .site-nav {
-      color: $white-text-color;
+}
+.main-nav__buy-button {
+  width: 210px;
+  height: 44px;
+  margin: 0 auto 20px;
 
-      @include for-desktop {
-          display: flex;
-      }
+  font-weight: 700;
+  line-height: 1.31;
+
+  @include for-tablet {
+    width: 186px;
   }
-  .main-nav__button {
-    width: 210px;
-    height: 44px;
-    margin: 0 auto 20px;
 
-    font-weight: 700;
+  @include for-desktop {
+    width: 159px;
+    margin: 38px 0 0;
+  }
+}
+.main-nav__buy-button--right {
+  width: 160px;
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+
+  @include only-phone {
+    display: none;
+  }
+
+  @include for-desktop {
+    display: none;
+  }
+}
+.site-nav__current {
+  color: $accent-dark;
+}
+.site-nav__item {
+  padding: 12px 21px;
+  border-top: 1px solid #e18298;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+
+  &:last-child {
+    border-bottom: 1px solid #e18298;
+  }
+
+  @include for-desktop {
+    padding: 50px 0 0;
+
+    &:not(:last-child) {
+      padding-right: 35px;
+    }
+    border: none;
+    font-size: 16px;
     line-height: 1.31;
 
-    @include for-desktop {
-        width: 159px;
-        margin: 38px 0 0;
-    }
-  }
-  .site-nav__current {
-      color: $accent-dark;
-  }
-  .site-nav__item {
-    padding: 12px 21px;
-    border-top: 1px solid #E18298;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.28;
-
     &:last-child {
-        border-bottom: 1px solid #E18298;
-    }
-
-    @include for-desktop {
-        padding: 50px 0 0;
-
-        &:not(:last-child) {
-            padding-right: 35px;
-        }
-        border: none;
-        font-size: 16px;
-        line-height: 1.31;
-
-        &:last-child {
-            border-bottom: none;
-        }
+      border-bottom: none;
     }
   }
+}
