@@ -1,0 +1,190 @@
+.section__reviews {
+  padding-top: 40px;
+  padding-bottom: 170px;
+
+  @include for-tablet {
+    padding-top: 60px;
+    padding-bottom: 200px;
+  }
+
+  @include for-desktop {
+    padding-bottom: 230px;
+  }
+}
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 0;
+
+  font-weight: 500;
+  line-height: 30px;
+
+  text-align: center;
+
+  color: $main-text-color;
+}
+.reviews__img {
+  margin-bottom: 30px;
+
+  @include for-tablet {
+    margin-bottom: 20px;
+  }
+
+  @include for-desktop {
+    margin-bottom: 15px;
+  }
+}
+.reviews__review {
+  max-width: 280px;
+  margin-bottom: 52px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 47px;
+  padding-bottom: 39px;
+
+  font-size: 12px;
+
+  background-color: #fafafa;
+
+  @include for-tablet {
+    max-width: 620px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 42px;
+
+    font-size: 14px;
+  }
+
+  @include for-desktop {
+    max-width: 926px;
+    padding-left: 59px;
+    padding-right: 59px;
+    margin-bottom: 34px;
+
+    font-size: 16px;
+  }
+}
+.reviews__text {
+  position: relative;
+  z-index: 1;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 29px,
+    #e1e1e1 29px,
+    #e1e1e1 30px
+  );
+
+  @include for-tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include for-desktop {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 10px;
+    top: -15px;
+    width: 54px;
+    height: 40px;
+    background-image: url('../images/mobile/reviews/braсkets.png');
+    background-size: 54px 40px;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/mobile/reviews/brackets@2x.png');
+    }
+
+    @include for-tablet {
+      left: -24px;
+      top: -15px;
+    }
+
+    @include for-desktop {
+      left: -8px;
+      top: -15px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(10%);
+    bottom: -75px;
+    width: 32px;
+    height: 4px;
+    background-image: url('../images/mobile/reviews/dots.svg');
+
+    @include for-tablet {
+      left: 47%;
+      bottom: -70px;
+    }
+
+    @include for-desktop {
+      left: 48%;
+      bottom: -60px;
+    }
+  }
+}
+.reviews__person {
+  font-size: 14px;
+  margin-bottom: 30px;
+
+  @include for-tablet {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  @include for-desktop {
+    font-size: 20px;
+  }
+}
+.slick-track {
+  display: flex;
+}
+.slick-list {
+  overflow: hidden;
+}
+.reviews-slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+}
+.reviews-slider .slick-dots li {
+  list-style: none;
+  margin-right: 15px;
+}
+.reviews-slider .slick-dots button {
+  display: block;
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+
+  background-color: #d9d9d9;
+}
+.reviews-slider .slick-dots li.slick-active button {
+  background-color: transparent;
+  background-image: url(../images/mobile/reviews/home.svg);
+  background-size: 12px 12px;
+  border-radius: 0;
+}

@@ -1,6 +1,16 @@
 
 .advantages {
     background-color: $light-bg;
+    padding-top: 20px;
+    padding-bottom: 70px;
+
+    @include for-tablet {
+        padding-top: 33px;
+    }
+
+    @include for-desktop {
+        padding-top: 73px;
+    }
 }
 
 .advantages__item {
@@ -25,7 +35,7 @@
         width: 330px;
         font-size: 16px;
         line-height: 28px;
-      }
+    }
 }
 
 .advantages__number {
