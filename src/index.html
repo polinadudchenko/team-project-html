@@ -22,40 +22,42 @@
     <include src="./partials/contacts.html"></include>
     <include src="./partials/footer.html"></include>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+
     <script src="./index.js"></script>
     <script src="./js/mobile-menu.js"></script>
     <script>
-      ;(() => {
-        document
-          .querySelector('.js-speaker-form')
-          .addEventListener('submit', e => {
-            e.preventDefault()
+      (() => {
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+          e.preventDefault();
 
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`),
-            )
-            e.currentTarget.reset()
-          })
-      })()
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+          e.currentTarget.reset();
+        });
+      })();
     </script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
     <script type="text/javascript">
-        $(document).ready(function(){
-         $('.button-animation').click(function(){
+      $(document).ready(function () {
+        $('.button-animation').click(function () {
           $(this).parent().children('.sub-text').slideToggle(250);
           return false;
-         });
         });
-        </script>
-        <script>
-          $(document).ready(function(){
-    $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
-        e.preventDefault();
-        var t = 1000;
-        var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
-        $('html,body').stop().animate({ scrollTop: $(d).offset().top }, t);
-    });
-});
-        </script>
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('a[href^="#"], *[data-href^="#"]').on('click', function (e) {
+          e.preventDefault();
+          var t = 1000;
+          var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+          $('html,body')
+            .stop()
+            .animate({ scrollTop: $(d).offset().top }, t);
+        });
+      });
+    </script>
   </body>
 </html>
