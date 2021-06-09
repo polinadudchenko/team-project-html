@@ -1,13 +1,14 @@
 
 .advantages {
     background-color: $light-bg;
+    padding-top: 20px;
+    padding-bottom: 70px;
 }
 
 .advantages__item {
     &:not(:last-child) {
         padding-bottom: 38px;
-    }
-}
+    }}
 
 .advantages__text {
     font-weight: 700;
