@@ -3,12 +3,30 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
 }
 .main-nav {
   position: relative;
-  /* background: $hero-bg; */
-  // Это я временно цвет поставила, потом надо будет transparent
+  z-index: 2;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-phone {
+    max-width: 480px;
+  }
+
+  @include for-tablet {
+    max-width: 768px;
+  }
+
+  @include for-desktop {
+    max-width: 1280px;
+  }
+}
+.main-nav {
+  display: flex;
+  position: relative;
+  background: transparent;
 
   @include for-desktop {
     display: flex;
@@ -17,6 +35,9 @@
 .main-nav__logo {
   display: inline-block;
   padding-top: 6px;
+  @include for-tablet {
+    padding-top: 13px;
+  }
 
   @include for-desktop {
     padding-top: 37px;
@@ -28,13 +49,18 @@
   position: absolute;
   top: 23px;
   right: 20px;
-  z-index: 2;
+  z-index: 3;
   display: block;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @include for-tablet {
+    top: 30px;
+    right: 225px;
+  }
 
   @include for-desktop {
     display: none;
@@ -74,7 +100,6 @@
 }
 .main-nav__menu {
   display: flex;
-  z-index: 1;
   padding: 60px 0;
 
   @include phone-and-tablet {
@@ -117,7 +142,8 @@
     display: flex;
   }
 }
-.main-nav__button {
+
+.main-nav__buy-button {
   width: 210px;
   height: 44px;
   margin: 0 auto 20px;
@@ -125,9 +151,28 @@
   font-weight: 700;
   line-height: 1.31;
 
+
+  @include for-tablet {
+    width: 186px;
+  }
+
   @include for-desktop {
     width: 159px;
     margin: 38px 0 0;
+  }
+}
+.main-nav__buy-button--right {
+  width: 160px;
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+
+  @include only-phone {
+    display: none;
+  }
+
+  @include for-desktop {
+    display: none;
   }
 }
 .site-nav__current {

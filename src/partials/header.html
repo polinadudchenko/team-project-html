@@ -1,78 +1,142 @@
 <header class="header">
-    <div class="container main-nav">
-        <a href="./index.html" class="main-nav__logo link">
-            <picture>
-                <source
-                  srcset="
-                    ./images/mobile/header/logo.png    1x,
-                    ./images/mobile/header/logo@2x.png 2x
-                  "
-                  type="image/jpeg"
-                />
-                <img
-                  src="./images/mobile/header/logo.png"
-                  alt="logo"
-                  width="199"
-                  height="50"
-                />
-              </picture>
-          </a>
-          <button
-            type="button"
-            class="main-nav__open-button"
-            aria-controls="main-nav__menu"
-            data-menu-button
-          >
-            <svg
-              class="main-nav__svg"
-              aria-label="switcher mobile menu"
-            >
-              <use
-                class="main-nav__open"
-                href="./images/icons.svg#menu"
-              ></use>
-              <use
-                class="main-nav__close"
-                href="./images/icons.svg#menu-close"
-              ></use>
-            </svg>
-          </button>
-          <div class="main-nav__menu" id="main-nav__menu" data-menu>
-              <button type="button"
-              class="button button--light main-nav__button">
-            Buy now
-            <svg
-            class="button__icon button__icon--dark"
-            width="10" height="10"
-            >
-            <use
-              href="./images/icons.svg#check-right"
-            ></use>
-          </svg></button>
-            <nav>
-              <ul class="site-nav list">
-                <li class="site-nav__item">
-                  <a
-                    href="./index.html"
-                    class="link site-nav__current site-nav__link"
-                  >
-                  Home
-                  </a>
-                </li>
-                <li class="site-nav__item">
-                  <a class="link site-nav__link" href="#">About us</a>
-                </li>
-                <li class="site-nav__item">
-                  <a class="link site-nav__link" href="#">How it’s made?</a>
-                </li>
-                <li class="site-nav__item">
-                    <a class="link site-nav__link" href="#">Our products</a>
-                </li>
-                <li class="site-nav__item">
-                    <a class="link site-nav__link" href="#">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>        
+  <div class="container main-nav">
+    <a href="./index.html" class="main-nav__logo link">
+      <picture>
+        <source
+          srcset="./images/mobile/header/logo.png 1x, ./images/mobile/header/logo@2x.png 2x"
+          type="image/jpeg"
+        />
+        <img src="./images/mobile/header/logo.png" alt="logo" width="199" height="50" />
+      </picture>
+    </a>
+    <button
+      type="button"
+      class="main-nav__open-button"
+      aria-controls="main-nav__menu"
+      data-menu-button
+    >
+      <svg class="main-nav__svg" aria-label="switcher mobile menu">
+        <use class="main-nav__open" href="./images/icons.svg#menu"></use>
+        <use class="main-nav__close" href="./images/icons.svg#menu-close"></use>
+      </svg>
+    </button>
+    <div class="main-nav__menu" id="main-nav__menu" data-menu>
+      <button type="button" class="button button--light main-nav__buy-button" data-buy-modal-open>
+        Buy now
+        <svg class="button__icon button__icon--dark" width="10" height="10">
+          <use href="./images/icons.svg#check-right"></use>
+        </svg>
+      </button>
+      <nav>
+        <ul class="site-nav list">
+          <li class="site-nav__item">
+            <a href="./index.html" class="link site-nav__current site-nav__link"> Home </a>
+          </li>
+          <li class="site-nav__item">
+            <a class="link site-nav__link" href="#">About us</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="link site-nav__link" href="#">How it’s made?</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="link site-nav__link" href="#">Our products</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="link site-nav__link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </div>
+    <button
+      type="button"
+      class="button button--light main-nav__buy-button--right"
+      data-buy-modal-open
+    >
+      Buy now
+      <svg class="button__icon button__icon--dark" width="10" height="10">
+        <use href="./images/icons.svg#check-right"></use>
+      </svg>
+    </button>
+  </div>
 </header>
+<div class="backdrop is-hidden" data-buy-modal>
+  <div class="buy-modal">
+    <button class="buy-modal__close" data-buy-modal-close>
+      <svg width="20" height="20">
+        <use href="./images/icons.svg#menu-close"></use>
+      </svg>
+    </button>
+    <h2 class="buy-modal__title">Leave your contact details, we will call you back</h2>
+    <form class="form js-speaker-form">
+      <div class="form__field">
+        <label class="form__label" for="name">Name</label>
+        <input
+          class="form__input"
+          type="text"
+          name="name"
+          id="name"
+          autofocus
+          required
+          minlength="3"
+          autocomplete="off"
+        />
+        <svg class="form__icon" width="18" height="18">
+          <use href="./images/icons.svg#icon-modal-name"></use>
+        </svg>
+      </div>
+
+      <div class="form__field">
+        <label class="form__label" for="tel">Phone number</label>
+        <input class="form__input" type="tel" name="tel" id="tel" required autocomplete="off" />
+        <svg class="form__icon" width="18" height="18">
+          <use href="./images/icons.svg#icon-modal-tel"></use>
+        </svg>
+      </div>
+
+      <div class="form__field">
+        <label class="form__label" for="email">Mail</label>
+        <input
+          class="form__input"
+          type="email"
+          name="email"
+          id="email"
+          required
+          autocomplete="off"
+        />
+        <svg class="form__icon" width="18" height="18">
+          <use href="./images/icons.svg#icon-modal-mail"></use>
+        </svg>
+      </div>
+
+      <div class="form__field">
+        <label class="form__label" for="comment">Comment</label>
+        <textarea
+          class="form__textarea"
+          name="comment"
+          id="comment"
+          rows="6"
+          placeholder="Write a comment"
+        ></textarea>
+      </div>
+      <label class="consent">
+        <input class="consent__checkbox" type="checkbox" name="consent" id="consent" required />
+        <svg class="consent__check" width="16" height="15">
+          <use href="./images/icons.svg#icon-modal-check"></use>
+        </svg>
+        <span class="consent__unchecked"></span>
+        <span>
+          I agree to the newsletter and accept the
+          <a
+            class="consent__agreement"
+            href="https://i.kym-cdn.com/photos/images/original/001/526/890/131.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Terms and Conditions
+          </a>
+        </span>
+      </label>
+      <button class="button button--dark form__button" type="submit">Submit</button>
+    </form>
+  </div>
+</div>

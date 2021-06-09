@@ -1,25 +1,14 @@
 
 .advantages {
     background-color: $light-bg;
-}
-
-.advantages__list { 
-
-    @include for-tablet {
-        display: flex;
-        margin-left: -60px;
-    }
+    padding-top: 20px;
+    padding-bottom: 70px;
 }
 
 .advantages__item {
     &:not(:last-child) {
         padding-bottom: 38px;
-    }
-
-    @include for-tablet {
-        margin-left: 60px;
-    }
-}
+    }}
 
 .advantages__text {
     font-weight: 700;
