@@ -8,6 +8,7 @@ $white-text-color: #ffffff;
 $hero-bg: #ffb8ca;
 $mobile-menu-bg: #e17992;
 $light-bg: #fff5f6;
+$modal-backdrop-bg: rgba(0, 0, 0, 0.2);
 
 $btn-light-color: #ffffff;
 $btn-hvr-light-bg: #ecebeb;
@@ -15,5 +16,8 @@ $btn-hvr-dark-bg: #c7133e;
 
 $main-font: 'DM Sans', sans-serif;
 $title-font: 'Titan One', sans-serif;
+
+$modal-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
 
 $animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
