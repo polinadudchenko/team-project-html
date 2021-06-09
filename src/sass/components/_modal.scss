@@ -1,61 +1,83 @@
 .backdrop {
-  display: flex;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  padding: 15px 15px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 
-  background-color: $modal-backdrop-bg;
+  background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity $animation, visibility $animation, transform $animation;
+  opacity: 1;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: visibility $animation, opacity $animation;
+
+  .buy-modal {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+  }
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: auto;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 
-  width: 85vw;
-  max-height: 450px;
+  max-width: 450px;
+  width: 100%;
 
-  @include for-phone {
-    max-width: 450px;
-    padding: 20px;
-  }
-  @include for-tablet {
-    max-width: 700px;
-    max-height: 700px;
-    padding: 40px;
-  }
-
-  padding: 10px;
+  max-height: 100vh;
+  padding: 40px;
+  overflow-y: auto;
 
   background-color: $light-bg;
-  box-shadow: $modal-box-shadow;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform $animation, opacity $animation;
+
+  @include for-desktop {
+    max-width: 528px;
+  }
 }
-.modal__btn-close {
+.modal__close {
   position: absolute;
   top: 8px;
   right: 8px;
-  padding: 0;
+  stroke: $accent-dark;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 30px;
   height: 30px;
+  background-color: $btn-light-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  cursor: pointer;
 
-  background-color: $light-bg;
-
-  transition: background-color $animation, stroke $animation;
+  transition: stroke $animation;
 
   &:hover,
   &:focus {
-    stroke: $btn-hvr-dark-bg;
-    background-color: $btn-hvr-light-bg;
+    stroke: $accent-light;
   }
 }
-.modal__icon-close {
-  stroke: $accent-dark;
+.modal__title {
+  color: $accent-dark;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 0.95;
+  text-align: center;
+  margin-bottom: 12px;
 }

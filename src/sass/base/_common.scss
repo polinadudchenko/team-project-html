@@ -5,6 +5,10 @@ body {
   letter-spacing: 0.04em;
 }
 
+body.overflow-is-hidden {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -48,4 +52,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+figure {
+  margin: 0;
 }
