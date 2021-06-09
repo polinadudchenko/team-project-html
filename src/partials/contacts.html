@@ -118,11 +118,11 @@
   <div class="location-modal">
     <div class="location-modal__image">
       <img src="./images/location/ice-cream.webp" alt="ice-cream" width="100%" />
-      <button class="location-modal__button" data-location-modal-close>
-        <svg width="16" height="16">
-          <use class="location-modal__icon" href="./images/icons.svg#menu-close"></use>
-        </svg>
-      </button>
+    <button class="modal__close" data-location-modal-close>
+      <svg width="20" height="20">
+        <use href="./images/icons.svg#menu-close"></use>
+      </svg>
+    </button>
     </div>
 
     <p class="location-modal__text">You can find us here!</p>
@@ -161,9 +161,9 @@
 
 <div class="franchise-backdrop is-hidden" data-franchise-modal>
   <div class="franchise-modal">
-    <button class="button franchise-button" data-franchise-modal-close>
-      <svg width="16" height="16">
-        <use class="franchise-modal__icon" href="./images/icons.svg#menu-close"></use>
+    <button class="modal__close" data-franchise-modal-close>
+      <svg width="20" height="20">
+        <use href="./images/icons.svg#menu-close"></use>
       </svg>
     </button>
     <p class="franchise-modal__title">Commercial concession agreement (franchise)</p>
@@ -231,11 +231,24 @@
         </p>
       </li>
     </ol>
-
-    <label class="franchise-modal-checkbox check">
-      <input type="checkbox" />
-      I agree with the terms of the contract
-    </label>
+      <label class="consent franchise-modal__consent">
+        <input class="consent__checkbox" type="checkbox" name="consent" id="consent" required />
+        <svg class="consent__check" width="16" height="15">
+          <use href="./images/icons.svg#icon-modal-check"></use>
+        </svg>
+        <span class="consent__unchecked"></span>
+        <span>
+          I agree to the newsletter and accept the
+          <a
+            class="consent__agreement"
+            href="https://i.kym-cdn.com/photos/images/original/001/526/890/131.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Terms and Conditions
+          </a>
+        </span>
+      </label>
 
     <button class="button button--dark franchise-modal__button" type="submit">Send</button>
   </div>
