@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/script.js"],"names":["$","document","ready","slick","arrows","dots"],"mappings":";AAAAA,EAAEC,UAAUC,MAAM,WAChBF,EAAE,mBAAmBG,MAAM,CACzBC,QAAQ,EACRC,MAAM","file":"script.44cc21cb.js","sourceRoot":"../src","sourcesContent":["$(document).ready(function () {\n  $('.reviews-slider').slick({\n    arrows: false,\n    dots: true,\n  });\n});\n"]}

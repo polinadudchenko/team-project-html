@@ -1,1 +1,0 @@
-{"version":3,"sources":["js/script.js"],"names":["$","document","ready"],"mappings":";AAAAA,EAAEC,UAAUC,MAAM","file":"script.a8509c49.js","sourceRoot":"../src","sourcesContent":["$(document).ready(function () {});\n"]}
