@@ -1,0 +1,145 @@
+.footer {
+  background-color: $light-bg;
+  padding-top: 55px;
+
+  @include for-tablet {
+    padding-top: 75px;
+  }
+
+  @include for-desktop {
+    padding-top: 85px;
+  }
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 43px;
+
+  @include for-tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 91px;
+  }
+
+  @include for-desktop {
+    margin-bottom: 97px;
+  }
+}
+
+.footer__text {
+  width: 234px;
+  font-family: $title-font;
+  text-transform: uppercase;
+  @include only-phone {
+    margin-bottom: 43px;
+  }
+
+  @include for-tablet {
+    width: 320px;
+  }
+
+  @include for-desktop {
+    width: 100%;
+  }
+}
+.footer__text-first {
+  font-size: 18px;
+  line-height: 1.16;
+  color: $accent-light;
+  margin-bottom: 17px;
+
+  @include for-tablet {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @include for-desktop {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+.footer__text-second {
+  font-size: 34px;
+  line-height: 1.14;
+  color: $accent-dark;
+
+  @include for-tablet {
+    font-size: 48px;
+  }
+
+  @include for-desktop {
+    font-size: 58px;
+    line-height: 1.13;
+  }
+}
+
+.footer__contacts {
+  align-self: flex-end;
+
+  @include for-tablet {
+    align-self: flex-start;
+  }
+}
+
+.footer__socials {
+  display: inline-flex;
+  margin-bottom: 46px;
+}
+
+.footer__socials-item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.footer__socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $accent-light;
+  transition: background-color $animation;
+}
+
+.footer__socials-link:hover,
+.footer__socials-link:focus {
+  background-color: $accent-dark;
+  transition: background-color $animation;
+}
+
+.footer__socials-link:hover .footer__socials-svg {
+  transition: fill $animation;
+}
+
+.footer__socials-svg {
+  fill: $white-text-color;
+  transition: fill $animation;
+}
+
+.footer__contacts {
+  width: 280px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.83;
+  text-align: right;
+}
+
+.footer__text-number {
+  color: $accent-dark;
+}
+
+.footer__copyright {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.footer__copyright-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: $secondary-text-color;
+}
