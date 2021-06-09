@@ -1,10 +1,14 @@
 .section__reviews {
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 170px;
 
   @include for-tablet {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 200px;
+  }
+
+  @include for-desktop {
+    padding-bottom: 230px;
   }
 }
 .reviews {
