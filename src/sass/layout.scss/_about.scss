@@ -1,10 +1,9 @@
-.about {
-  background-color: #fff5f6;
+.section__about {
+  background-color: $light-bg;
 }
-.about__container {
+.about {
   padding-top: 125px;
   padding-bottom: 20px;
-
   font-weight: 500;
 
   background-image: url('../images/mobile/about/bg-milk.png');
@@ -155,3 +154,6 @@
 .about__btn {
   width: 176px;
 }
+// .modal__icon-close {
+//   stroke: black;
+// }

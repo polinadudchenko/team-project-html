@@ -18,8 +18,8 @@
   pointer-events: none;
 
   transition: visibility $animation, opacity $animation;
-  
-.buy-modal {
+
+  .buy-modal {
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
   }
