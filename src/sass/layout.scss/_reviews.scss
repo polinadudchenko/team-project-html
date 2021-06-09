@@ -138,14 +138,15 @@
 }
 .reviews__person {
   font-size: 14px;
+  margin-bottom: 30px;
 
   @include for-tablet {
     font-size: 16px;
+    margin-bottom: 35px;
   }
 
   @include for-desktop {
     font-size: 20px;
-    margin-bottom: 35px;
   }
 }
 .slick-track {
