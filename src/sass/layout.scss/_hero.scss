@@ -230,6 +230,7 @@
 }
 
 .hero__about {
+  
   display: none;
 
   @include for-tablet {
@@ -246,6 +247,7 @@
 }
 
 .hero__about-text {
+
   margin-bottom: 7px;
   width: 130px;
   font-size: 8px;
@@ -264,6 +266,7 @@
 }
 
 .hero__about-btn {
+  position: relative;
   display: none;
 
   @include for-tablet {
@@ -278,4 +281,29 @@
     width: 26px;
     height: 26px;
   }
+}
+.sub-read{
+position: absolute;
+display: none;
+border-radius: 10px;
+font-weight: 700;
+line-height: 1.5;
+letter-spacing: 0.04em;
+background-color: $hero-bg;
+color: $white-text-color;
+ text-align: center;
+@include for-tablet{
+  width: 180px;
+  font-size: 10px;
+  padding: 10px 5px;
+  top: -93%;
+  height: 164%;
+    }
+    @include for-desktop{
+      font-size: 14px;
+      width: 300px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      height: 155%;
+    }
 }
