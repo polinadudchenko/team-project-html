@@ -52,6 +52,14 @@
   }
 }
 
+.contacts__item:last-child{
+    margin-bottom: 0;
+
+    @include for-tablet{
+        margin-right: 0;
+    }
+}
+
 .contacts__type {
   font-weight: 500;
   font-size: 12px;
@@ -101,6 +109,14 @@
   font-size: 12px;
   line-height: 1.83;
   font-weight: 500;
+
+  @include for-tablet{
+    font-size: 14px; 
+  }
+
+  @include for-desktop{
+    font-size: 16px;  
+  }
 }
 
 .contacts__location {
@@ -111,10 +127,10 @@
   color: $secondary-text-color;
   font-size: 12px;
   line-height: 1.5;
-  width: 179px;
+
 
   @include for-tablet {
-    width: 145px;
+    
     font-size: 14px;
     line-height: 1.64;
   }
@@ -138,10 +154,14 @@
 
   @include for-tablet {
     width: 157px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   @include for-desktop {
     width: 234px;
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 }
 
@@ -156,6 +176,17 @@
 }
 .contact-info__item {
   color: $secondary-text-color;
+  font-size: 12px;
+
+  @include for-tablet {
+    font-size: 14px;
+    
+  }
+
+  @include for-desktop {
+    font-size: 16px;
+   
+  }
 }
 
 .contact-info::before {
