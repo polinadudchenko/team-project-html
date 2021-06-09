@@ -286,7 +286,7 @@
 position: absolute;
 display: none;
 border-radius: 10px;
-font-weight: 700;
+font-weight: 400;
 line-height: 1.5;
 letter-spacing: 0.04em;
 background-color: $hero-bg;
@@ -300,6 +300,7 @@ color: $white-text-color;
   height: 164%;
     }
     @include for-desktop{
+      font-weight: 700;
       font-size: 14px;
       width: 300px;
       padding-top: 20px;
