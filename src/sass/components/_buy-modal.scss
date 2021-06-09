@@ -29,7 +29,7 @@
     max-width: 528px;
   }
 }
-.buy-modal__close {
+.modal__close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -121,43 +121,6 @@
   @include phone-and-tablet {
     font-size: 10.5px;
     line-height: 1.1;
-  }
-}
-.consent__checkbox {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-.consent__unchecked {
-  margin-right: 8px;
-  min-width: 16px;
-  height: 15px;
-  border: 2px solid $accent-light;
-  border-radius: 2px;
-
-  transition: border $animation;
-
-  .consent__checkbox:focus ~ & {
-    border: 2px solid $accent-dark;
-  }
-}
-.consent__check {
-  position: absolute;
-  fill: white;
-  background-color: $accent-dark;
-  border-radius: 2px;
-  background-origin: border-box;
-  opacity: 0;
-
-  transition: opacity $animation;
-
-  .consent__checkbox:checked + & {
-    opacity: 1;
   }
 }
 .consent__agreement {

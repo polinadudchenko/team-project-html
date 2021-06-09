@@ -1,6 +1,6 @@
 .backdrop {
   position: fixed;
-  z-index: 10;
+  z-index: 99;
   top: 0;
   left: 0;
   padding: 15px 15px;
@@ -19,7 +19,7 @@
 
   transition: visibility $animation, opacity $animation;
 
-  .buy-modal {
+ .buy-modal {
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
   }
