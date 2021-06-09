@@ -250,7 +250,7 @@
 
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 165, 186, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
   padding: 40px 40px;
 
@@ -368,7 +368,7 @@
 
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 165, 186, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
   padding: 20px 20px;
 
@@ -386,7 +386,10 @@
 }
 
 .franchise-modal {
-  background-color: rgb(241 242 242);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $light-bg;
   padding: 30px;
   position: relative;
   z-index: 2;
@@ -422,6 +425,7 @@
 }
 
 .franchise-modal__title {
+  color: $accent-dark;
   font-size: 17px;
   font-weight: 800;
   line-height: 1.13;
@@ -471,8 +475,13 @@
   }
 }
 
-.franchise-modal-checkbox {
-  margin-left: 40px;
+.franchise-modal__consent {
+  margin: 0 auto;
+  font-size: 12px;
+
+  @include for-tablet {
+    font-size: 16px;
+  }
 }
 
 .franchise-modal__button {

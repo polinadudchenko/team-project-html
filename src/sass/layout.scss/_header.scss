@@ -142,7 +142,12 @@
     display: flex;
   }
 }
-
+.site-nav__link {
+  &:hover,
+  &:focus {
+    color: $accent-dark;
+  }
+}
 .main-nav__buy-button {
   width: 210px;
   height: 44px;
@@ -174,9 +179,6 @@
   @include for-desktop {
     display: none;
   }
-}
-.site-nav__current {
-  color: $accent-dark;
 }
 .site-nav__item {
   padding: 12px 21px;
