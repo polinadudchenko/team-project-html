@@ -1,11 +1,16 @@
 .contacts{
 background-color: $light-bg;
-padding-bottom: 57px;
+padding-bottom: 55px;
 
-    @include for-desktop{
-        background-image: url(../images/desktop/contacts/bg-points.png);
-        background-image: url(../images/desktop/contacts/bg-points@2x.png);
-        background-repeat: no-repeat;
+@include for-tablet{
+    padding-bottom: 75px;
+    }
+
+ @include for-desktop{
+    background-image: url(../images/desktop/contacts/bg-points.png);
+    background-image: url(../images/desktop/contacts/bg-points@2x.png);
+    background-repeat: no-repeat;
+    padding-bottom: 85px;
     }
 }
 
