@@ -355,3 +355,116 @@ padding-bottom: 57px;
     
 }
 
+.franchise-backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 186, 0.8);
+    overflow-y: scroll;
+    padding: 20px 20px;
+
+    @include for-phone{
+        padding: 30px 30px;
+    }
+
+    @include for-tablet{
+        padding: 40px 40px;
+    }
+
+    @include for-desktop{
+        padding: 65px 180px; 
+    }
+}
+
+.franchise-modal{
+    background-color: rgb(241 242 242);
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+
+    @include for-desktop{
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.franchise-button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: white;
+}
+
+.franchise-modal__icon {
+    stroke: $btn-hvr-dark-bg;
+}
+
+.franchise-modal__title{
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.13;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include for-phone{
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.13;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    @include for-tablet{
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1.13;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.franchise-modal__subtitle{
+    font-size: 12px;
+    line-height: 1.13;
+    margin-bottom: 10px;
+    
+    @include for-phone{
+        font-size: 14px;  
+    }
+
+    @include for-tablet{
+        font-size: 16px;
+    }
+}
+
+.franchise-modal__text{
+    font-size: 12px;
+    line-height: 1.13;
+    margin-bottom: 10px; 
+
+    @include for-phone{
+        font-size: 14px;  
+    }
+
+    @include for-tablet{
+        font-size: 16px;
+    }
+}
+
+
+.franchise-modal__button {
+    width: 160px;
+    color: white;
+    background-color: $btn-hvr-dark-bg;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}

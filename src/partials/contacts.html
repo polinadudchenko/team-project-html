@@ -73,7 +73,7 @@
             </li>
 
             <li class="more-info__item">
-                <button class="button button--light contact-button" aria-label="Franchise">Franchise
+                <button class="button button--light contact-button" aria-label="Franchise" data-franchise-modal-open>Franchise
                     <svg class="button__icon  button__icon--dark" width="4.43" height= "8">
                         <use href="./images/icons.svg#check-right"></use>
                         </svg>
@@ -115,4 +115,53 @@
     </div>
   </div>
 
+  <div class="franchise-backdrop is-hidden" data-franchise-modal>
+    <div class="franchise-modal">
+        <button class="button franchise-button" data-franchise-modal-close>
+            <svg width="16" height="16">
+                <use class="franchise-modal__icon" href="./images/icons.svg#menu-close"></use>
+            </svg>
+          </button> 
+        <p class="franchise-modal__title">Commercial concession agreement (franchise)</p>
+        <ol class="franchise-modal__contract-structure">
+            <li class="franchise-modal__subtitle">Definition of terms
+                <p class="franchise-modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, neque! Amet ratione officiis fugit delectus dolores, explicabo quis dolorem temporibus at ullam labore iure praesentium dignissimos id, molestias maxime! Laborum.</p>
+            </li>
+
+            <li class="franchise-modal__subtitle">Scope of the contract
+                <p class="franchise-modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, neque! Amet ratione officiis fugit delectus dolores, explicabo quis dolorem temporibus at ullam labore iure praesentium dignissimos id, molestias maxime! Laborum.</p>
+            </li>
+
+            <li class="franchise-modal__subtitle">Terms of cooperation
+                <p class="franchise-modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, neque! Amet ratione officiis fugit delectus dolores, explicabo quis dolorem temporibus at ullam labore iure praesentium dignissimos id, molestias maxime! Laborum.</p>
+            </li>
+
+            <li class="franchise-modal__subtitle">Payments and settlement procedure
+                <p class="franchise-modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, neque! Amet ratione officiis fugit delectus dolores, explicabo quis dolorem temporibus at ullam labore iure praesentium dignissimos id, molestias maxime! Laborum.</p>
+            </li>
+
+            <li class="franchise-modal__subtitle">Payments and settlement procedure
+                <p class="franchise-modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, neque! Amet ratione officiis fugit delectus dolores, explicabo quis dolorem temporibus at ullam labore iure praesentium dignissimos id, molestias maxime! Laborum.</p>
+            </li>
+
+            <li class="franchise-modal__subtitle">Payments and settlement procedure
+                <p class="franchise-modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, neque! Amet ratione officiis fugit delectus dolores, explicabo quis dolorem temporibus at ullam labore iure praesentium dignissimos id, molestias maxime! Laborum.</p>
+            </li>
+
+            <li class="franchise-modal__subtitle">Payments and settlement procedure
+                <p class="franchise-modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, neque! Amet ratione officiis fugit delectus dolores, explicabo quis dolorem temporibus at ullam labore iure praesentium dignissimos id, molestias maxime! Laborum.</p>
+            </li>
+
+        </ol>
+
+        <label class="franchise-modal-checkbox check"> 
+            <input type="checkbox" />
+            I agree with the terms of the contract
+          </label>
+         
+          <button class="button franchise-modal__button" type="submit">Send</button>
+    </div>
+  </div>
+
   <script src="./js/location-modal.js"></script>
+  <script src="./js/franchise-modal.js"></script>
