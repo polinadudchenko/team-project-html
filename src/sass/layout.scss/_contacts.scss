@@ -1,468 +1,442 @@
-.contacts{
-background-color: $light-bg;
-padding-bottom: 55px;
+.contacts {
+  background-color: $light-bg;
+  padding-bottom: 57px;
 
-@include for-tablet{
-    padding-bottom: 75px;
-    }
-
- @include for-desktop{
+  @include for-desktop {
     background-image: url(../images/desktop/contacts/bg-points.png);
     background-image: url(../images/desktop/contacts/bg-points@2x.png);
     background-repeat: no-repeat;
-    padding-bottom: 85px;
-    }
+  }
 }
 
-.container{
-    width: 100%;
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 54px;
 
-    @include for-phone{
-        max-width: 480px;
-    }
+  @include for-tablet {
+    flex-direction: row;
+    margin-bottom: 81px;
+  }
 
-    @include for-tablet{
-        max-width: 768px;
-    }
-
-    @include for-desktop{
-        max-width: 1280px;
-    }
+  @include for-desktop {
+    margin-bottom: 86px;
+  }
 }
 
-.contacts__list{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-bottom: 54px;
 
-    @include for-tablet{
-        flex-direction: row;
-        margin-right: -20px;
-        margin-bottom: 81px;
-    } 
-    
-    @include for-desktop{
-        margin-right: -31px;
-        margin-bottom: 86px;
-    }
-}
-
-.contacts__item{
-    width: 220px;
-    height: 427px;
-    padding: 43px 20px;
+.contacts__item {
+  @include only-phone {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    width: 220px;
+    height: 427px;
+  }
 
-    background-color: #fff;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;  
+  padding: 43px 20px;
 
-    @include for-tablet{
-        flex-basis: calc((100% - 20px * 3) /3);
-        height: 544px;
-        padding: 50px 31px;
-        
-    }
-    @include for-desktop{
-        flex-basis: calc((100% - 31px * 3) /3);
-        margin-right: 31px;
-        
-    }
+
+  background-color: #fff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
 }
 
+.contacts__type {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  text-transform: uppercase;
+  background-color: #f0d1a5;
+  color: $white-text-color;
+  width: 80px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 25px;
 
-.contacts__type{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.83;  
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    background-color: #F0D1A5;
-    color:$white-text-color;
-    width: 80px;
-    border-radius: 4px;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.04em;
-    margin-bottom: 25px;
-    
-
-    @include for-tablet{
-        font-size: 16px;
-    }
+  @include for-tablet {
+    font-size: 16px;
+  }
 }
 
-.contacts__type--background{
-    background-color: #C2E297;
-    width: 138px; 
-    
+.contacts__type--background {
+  background-color: #c2e297;
+  width: 138px;
 
-    @include for-tablet{
-        font-size: 16px;
-    }
+  @include for-tablet {
+    font-size: 16px;
+  }
 }
 
 .contacts__location,
-.contacts__work-days{
-    color: $main-text-color;
-    font-size: 12px;
-    line-height: 1.83;
-    font-weight: 500;
+.contacts__work-days {
+  color: $main-text-color;
+  font-size: 12px;
+  line-height: 1.83;
+  font-weight: 500;
 
-    @include for-tablet{
-        font-size: 14px;
-        line-height: 1.85;
-    }
+  @include for-tablet {
+    font-size: 14px;
+    line-height: 1.85;
+  }
 
-    @include for-desktop{
-        font-size: 16px;
-        line-height: 1.87;
-    }
+  @include for-desktop {
+    font-size: 16px;
+    line-height: 1.87;
+  }
 }
 
-// .contacts__work-days{
-//     padding: 10px 0;
-// }
-
-.contacts__working-hours{
-    color: $accent-light;
-    font-size: 12px;
-    line-height: 1.83;
-    font-weight: 500;
+.contacts__working-hours {
+  color: $accent-light;
+  font-size: 12px;
+  line-height: 1.83;
+  font-weight: 500;
 }
 
-.contacts__location{
-    margin-bottom: 10px;
+.contacts__location {
+  margin-bottom: 10px;
 }
 
-.contacts__text{
-    color: $secondary-text-color;
-    font-size: 12px;
-    line-height: 1.5;
-    width: 179px;
+.contacts__text {
+  color: $secondary-text-color;
+  font-size: 12px;
+  line-height: 1.5;
+  width: 179px;
 
-    @include for-tablet{
-        width: 145px;
-        font-size: 14px;
-        line-height: 1.64;
-    }
+  @include for-tablet {
+    width: 145px;
+    font-size: 14px;
+    line-height: 1.64;
+  }
 
-    @include for-desktop{
-        width: 243px;
-        font-size: 16px;
-        line-height: 1.81;
-    }
+  @include for-desktop {
+    width: 243px;
+    font-size: 16px;
+    line-height: 1.81;
+  }
 }
 
-.contacts__text::after{
-    content: "";
-    width: 179px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    height: 0px;
-    display: block;
-    border: 1px solid #E1E1E1;
-    background-color: #E1E1E1;
+.contacts__text::after {
+  content: '';
+  width: 179px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 0px;
+  display: block;
+  border: 1px solid #e1e1e1;
+  background-color: #e1e1e1;
 
-    @include for-tablet{
-        width: 157px;
-    }
+  @include for-tablet {
+    width: 157px;
+  }
 
-    @include for-desktop{
-        width: 234px;
-    }
+  @include for-desktop {
+    width: 234px;
+  }
 }
 
-.contact-info{
-    font-size: 12px;
-    line-height: 1.5;
+.contact-info {
+  font-size: 12px;
+  line-height: 1.5;
 
-    @include for-tablet{
-        font-size: 14px;
-        line-height: 1.85;
-    }
+  @include for-tablet {
+    font-size: 14px;
+    line-height: 1.85;
+  }
 }
-.contact-info__item{
-    color: $secondary-text-color;
-}
-
-.contact-info::before{
-    content: "";
-    width: 179px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    height: 0px;
-    display: block;
-    border: 1px solid #E1E1E1; 
-    background-color: #E1E1E1;
-
-    @include for-tablet{
-        width: 157px;
-    }
-
-    @include for-desktop{
-        width: 234px;
-    }
+.contact-info__item {
+  color: $secondary-text-color;
 }
 
-.more-info{
-    @include for-tablet{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.contact-info::before {
+  content: '';
+  width: 179px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 0px;
+  display: block;
+  border: 1px solid #e1e1e1;
+  background-color: #e1e1e1;
+
+  @include for-tablet {
+    width: 157px;
+  }
+
+  @include for-desktop {
+    width: 234px;
+  }
 }
 
-.more-info__item{
-    @include for-tablet{
-        margin-right: 15px;
-    }
-}
-
-.more-info__item .button--dark,
-.more-info__item .button--light{
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.more-info__item .button--dark{
-    margin-bottom: 10px;
-
-    @include for-tablet{
-        margin-bottom: 0;
-    }
-}
-
-.contact-button{
-    width: 161px;
-    @include for-tablet{
-        width: 191px;
-    }
-}
-
-.location-backdrop{
-    position: fixed;
-    top: 0;
-    left: 0;
-    
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 165, 186, 0.8);
-    overflow-y: scroll;
-    padding: 40px 40px;
-
-    @include for-phone{
-        padding: 57px 57px;
-    }
-
-    @include for-tablet{
-        padding: 65px 95px;
-    }
-
-    @include for-desktop{
-        padding: 65px 180px; 
-    }
-}
-
-.location-modal{
-    background-color: #fff5f6;
-    position: relative;
-    z-index: 2;
-
-    @include for-desktop{
-        width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-.location-modal__image{
-    height: auto;
-    overflow: hidden;
-    margin-bottom: 10px;
-    
-
-    @include for-tablet{
-        height: 300px;
-        margin-bottom: 30px;
-    }
-}
-
-.location-modal__button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.more-info {
+  @include for-tablet {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    border: transparent;
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+  }
+}
+
+.more-info__item {
+  @include for-tablet {
+    margin-right: 15px;
+  }
+}
+
+.more-info__item .button--dark,
+.more-info__item .button--light {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.more-info__item .button--dark {
+  margin-bottom: 10px;
+
+  @include for-tablet {
+    margin-bottom: 0;
+  }
+}
+
+.contact-button {
+  width: 161px;
+  @include for-tablet {
+    width: 191px;
+  }
+}
+
+.location-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 186, 0.8);
+  overflow-y: scroll;
+  padding: 40px 40px;
+
+  @include for-phone {
+    padding: 57px 57px;
+  }
+
+  @include for-tablet {
+    padding: 65px 95px;
+  }
+
+  @include for-desktop {
+    padding: 65px 180px;
+  }
+}
+
+.location-modal {
+  background-color: #fff5f6;
+  position: relative;
+  z-index: 10;
+
+  @include for-desktop {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.location-modal__image {
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  @include for-tablet {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+}
+
+.location-modal__button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: transparent;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: border $animation;
 }
 
 .location-modal__icon {
-    stroke: black;
+  stroke: $accent-light;
+  transition: stroke $animation;
 }
 
-.location-modal__text{
-    font-size: 15px;
-    line-height: 1.13;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 10px;
-
-    @include for-tablet{
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    @include for-desktop{
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
+.location-modal__button:hover,
+.location-modal__button:focus {
+  border: 1px solid $accent-dark;
 }
 
-.location-modal__city{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.location-modal__button:hover .location-modal__icon,
+.location-modal__button:focus .location-modal__icon {
+  stroke: $accent-dark;
 }
 
-.location-modal__maps{
-    width: 221px;
-    height: 221px;
-    margin-bottom: 10px;
-    border: 2px solid #ffa5ba;
+.location-modal__text {
+  font-size: 15px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @include for-tablet {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  @include for-desktop {
+    font-size: 30px;
+  }
+}
+
+.location-modal__city {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.location-modal__maps {
+  width: 221px;
+  height: 221px;
+  margin-bottom: 10px;
+  border: 2px solid #ffa5ba;
+  overflow: hidden;
+
+  @include for-phone {
+    width: 300px;
     overflow: hidden;
-    
+  }
 
-    @include for-phone{
-        width: 300px;
-        overflow: hidden;
-    }
-
-    @include for-tablet{
-        width: 276px;
-    }
-    
+  @include for-tablet {
+    width: 276px;
+  }
 }
 
-.franchise-backdrop{
-    position: fixed;
-    top: 0;
-    left: 0;
-    
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 165, 186, 0.8);
-    overflow-y: scroll;
-    padding: 20px 20px;
+.franchise-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    @include for-phone{
-        padding: 30px 30px;
-    }
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 186, 0.8);
+  overflow-y: scroll;
+  padding: 20px 20px;
 
-    @include for-tablet{
-        padding: 40px 40px;
-    }
+  @include for-phone {
+    padding: 30px 30px;
+  }
 
-    @include for-desktop{
-        padding: 65px 180px; 
-    }
+  @include for-tablet {
+    padding: 40px 40px;
+  }
+
+  @include for-desktop {
+    padding: 65px 180px;
+  }
 }
 
-.franchise-modal{
-    background-color: rgb(241 242 242);
-    padding: 20px;
-    position: relative;
-    z-index: 2;
+.franchise-modal {
+  background-color: rgb(241 242 242);
+  padding: 30px;
+  position: relative;
+  z-index: 2;
 
-    @include for-desktop{
-        width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  @include for-desktop {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.franchise-button{
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: white;
+.franchise-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  transition: border $animation;
 }
 
 .franchise-modal__icon {
-    stroke: $btn-hvr-dark-bg;
+  stroke: $accent-light;
+  transition: stroke $animation;
 }
 
-.franchise-modal__title{
-    font-size: 17px;
-    font-weight: 800;
-    line-height: 1.13;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    @include for-phone{
-        font-size: 20px;
-        font-weight: 800;
-        line-height: 1.13;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    @include for-tablet{
-        font-size: 24px;
-        font-weight: 800;
-        line-height: 1.13;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+.franchise-button:hover,
+.franchise-button:focus {
+  border: 1px solid $accent-dark;
 }
 
-.franchise-modal__subtitle{
-    font-size: 12px;
-    line-height: 1.13;
-    margin-bottom: 10px;
-    
-    @include for-phone{
-        font-size: 14px;  
-    }
-
-    @include for-tablet{
-        font-size: 16px;
-    }
+.franchise-button:hover .franchise-modal__icon,
+.franchise-button:focus .franchise-modal__icon {
+  stroke: $accent-dark;
 }
 
-.franchise-modal__text{
-    font-size: 12px;
-    line-height: 1.13;
-    margin-bottom: 10px; 
+.franchise-modal__title {
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.13;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
-    @include for-phone{
-        font-size: 14px;  
-    }
+  @include for-phone {
+    font-size: 20px;
+  }
 
-    @include for-tablet{
-        font-size: 16px;
-    }
+  @include for-tablet {
+    font-size: 24px;
+  }
 }
 
+.franchise-modal__subtitle {
+  font-size: 12px;
+  line-height: 1.13;
+  margin-bottom: 10px;
+
+  @include for-phone {
+    font-size: 14px;
+  }
+
+  @include for-tablet {
+    font-size: 16px;
+  }
+}
+
+.franchise-modal__text {
+  font-size: 12px;
+  line-height: 1.13;
+  margin-bottom: 10px;
+
+  @include for-phone {
+    font-size: 14px;
+  }
+
+  @include for-tablet {
+    font-size: 16px;
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.franchise-modal-checkbox {
+  margin-left: 40px;
+}
 
 .franchise-modal__button {
-    width: 160px;
-    color: white;
-    background-color: $btn-hvr-dark-bg;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }

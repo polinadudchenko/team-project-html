@@ -1,9 +1,22 @@
+.section__reviews {
+  padding-top: 40px;
+  padding-bottom: 170px;
+
+  @include for-tablet {
+    padding-top: 60px;
+    padding-bottom: 200px;
+  }
+
+  @include for-desktop {
+    padding-bottom: 230px;
+  }
+}
 .reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+
+  min-width: 0;
 
   font-weight: 500;
   line-height: 30px;
@@ -11,11 +24,6 @@
   text-align: center;
 
   color: $main-text-color;
-
-  @include for-tablet {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
 }
 .reviews__img {
   margin-bottom: 30px;
@@ -113,9 +121,9 @@
 
   &::after {
     content: '';
-    display: block;
     position: absolute;
-    left: 42%;
+    left: 50%;
+    transform: translateX(10%);
     bottom: -75px;
     width: 32px;
     height: 4px;
@@ -134,13 +142,49 @@
 }
 .reviews__person {
   font-size: 14px;
+  margin-bottom: 30px;
 
   @include for-tablet {
     font-size: 16px;
+    margin-bottom: 35px;
   }
 
   @include for-desktop {
     font-size: 20px;
   }
 }
+.slick-track {
+  display: flex;
+}
+.slick-list {
+  overflow: hidden;
+}
+.reviews-slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+}
+.reviews-slider .slick-dots li {
+  list-style: none;
+  margin-right: 15px;
+}
+.reviews-slider .slick-dots button {
+  display: block;
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
 
+  background-color: #d9d9d9;
+}
+.reviews-slider .slick-dots li.slick-active button {
+  background-color: transparent;
+  background-image: url(../images/mobile/reviews/home.svg);
+  background-size: 12px 12px;
+  border-radius: 0;
+}
