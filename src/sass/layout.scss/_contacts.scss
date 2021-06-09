@@ -37,17 +37,12 @@ padding-bottom: 55px;
     margin-bottom: 54px;
 
     @include for-tablet{
-        display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
         margin-right: -20px;
         margin-bottom: 81px;
     } 
     
     @include for-desktop{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
         margin-right: -31px;
         margin-bottom: 86px;
     }
@@ -67,13 +62,11 @@ padding-bottom: 55px;
 
     @include for-tablet{
         flex-basis: calc((100% - 20px * 3) /3);
-        width: 220px;
         height: 544px;
         padding: 50px 31px;
         
     }
     @include for-desktop{
-        width: 330px;
         flex-basis: calc((100% - 31px * 3) /3);
         margin-right: 31px;
         
