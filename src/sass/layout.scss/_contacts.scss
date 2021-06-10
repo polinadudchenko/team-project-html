@@ -239,42 +239,7 @@
   }
 }
 
-.location-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
-  padding: 40px 40px;
-
-  @include for-phone {
-    padding: 57px 57px;
-  }
-
-  @include for-tablet {
-    padding: 65px 95px;
-  }
-
-  @include for-desktop {
-    padding: 65px 180px;
-  }
-}
-
 .location-modal {
-  background-color: #fff5f6;
-  position: relative;
-  z-index: 10;
-  max-height: 100vh;
-  overflow-y: auto;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-
   @include for-desktop {
     width: 900px;
   }
@@ -291,38 +256,8 @@
   }
 }
 
-.location-modal__button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: transparent;
-  background-color: white;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: border $animation;
-}
-
-.location-modal__icon {
-  stroke: $accent-light;
-  transition: stroke $animation;
-}
-
-.location-modal__button:hover,
-.location-modal__button:focus {
-  border: 1px solid $accent-dark;
-}
-
-.location-modal__button:hover .location-modal__icon,
-.location-modal__button:focus .location-modal__icon {
-  stroke: $accent-dark;
-}
-
 .location-modal__text {
+  color: $accent-dark;
   font-size: 15px;
   line-height: 1.13;
   text-transform: uppercase;
@@ -362,88 +297,14 @@
   }
 }
 
-.franchise-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
-  padding: 20px 20px;
-
-  @include for-phone {
-    padding: 30px 30px;
-  }
-
-  @include for-tablet {
-    padding: 40px 40px;
-  }
-
-  @include for-desktop {
-    padding: 65px 180px;
-  }
-}
-
 .franchise-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $light-bg;
-  padding: 30px;
-  position: relative;
   z-index: 2;
-  max-height: 100vh;
-  overflow-y: auto;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
 
   @include for-desktop {
     width: 900px;
-  }
-}
-
-.franchise-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: white;
-  transition: border $animation;
-}
-
-.franchise-modal__icon {
-  stroke: $accent-light;
-  transition: stroke $animation;
-}
-
-.franchise-button:hover,
-.franchise-button:focus {
-  border: 1px solid $accent-dark;
-}
-
-.franchise-button:hover .franchise-modal__icon,
-.franchise-button:focus .franchise-modal__icon {
-  stroke: $accent-dark;
-}
-.franchise-modal__title {
-  color: $accent-dark;
-  font-size: 17px;
-  font-weight: 800;
-  line-height: 1.13;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  @include for-phone {
-    font-size: 20px;
-  }
-
-  @include for-tablet {
-    font-size: 24px;
   }
 }
 
@@ -452,7 +313,7 @@
   line-height: 1.13;
   margin-bottom: 10px;
 
-  @include for-phone {
+  @include only-phone {
     font-size: 14px;
   }
 
@@ -474,6 +335,10 @@
 .franchise-modal__consent {
   margin: 0 auto;
   font-size: 16px;
+
+  @include phone-and-tablet {
+    font-size: 14px;
+  }
 }
 
 .franchise-modal__button {
