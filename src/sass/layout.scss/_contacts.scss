@@ -147,13 +147,17 @@
 
 .contacts__text::after {
   content: '';
-  width: 179px;
+  width: 100%;
   margin-top: 25px;
   margin-bottom: 25px;
   height: 0px;
   display: block;
   border: 1px solid #e1e1e1;
   background-color: #e1e1e1;
+
+  @include for-phone{
+    width: 179px;  
+  }
 
   @include for-tablet {
     width: 157px;
@@ -192,13 +196,17 @@
 
 .contact-info::before {
   content: '';
-  width: 179px;
+  width: 100%;
   margin-top: 25px;
   margin-bottom: 25px;
   height: 0px;
   display: block;
   border: 1px solid #e1e1e1;
   background-color: #e1e1e1;
+
+  @include for-phone{
+    width: 179px;  
+  }
 
   @include for-tablet {
     width: 157px;
