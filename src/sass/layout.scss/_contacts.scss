@@ -40,15 +40,12 @@
     height: 427px;
     }
 
-  padding: 43px 20px;
+ 
 
-  background-color: #fff;
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  border-radius: 24px;
-
-  @include for-tablet {
+    @include for-tablet {
     position: relative;
     top: -77px;
+    height: 544px;
   }
 
   @include for-desktop {
