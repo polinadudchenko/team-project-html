@@ -122,20 +122,19 @@
   &::after {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(10%);
+    left: 44%;
     bottom: -75px;
     width: 32px;
     height: 4px;
     background-image: url('../images/mobile/reviews/dots.svg');
 
     @include for-tablet {
-      left: 47%;
+      left: 48%;
       bottom: -70px;
     }
 
     @include for-desktop {
-      left: 48%;
+      left: 49%;
       bottom: -60px;
     }
   }

@@ -1,15 +1,24 @@
 .section__about {
-  background-color: $light-bg;
-}
-.about {
   padding-top: 125px;
   padding-bottom: 20px;
+
+  background-color: $light-bg;
+
+  @include for-tablet {
+    padding-bottom: 33px;
+  }
+
+  @include for-desktop {
+    padding-bottom: 35px;
+  }
+}
+.about {
   font-weight: 500;
 
   background-image: url('../images/mobile/about/bg-milk.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left 0 bottom 81px;
+  background-position: left 0 bottom 61px;
 
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -19,13 +28,11 @@
   }
 
   @include for-tablet {
-    padding-bottom: 33px;
-
     background-image: url('../images/tablet/about/about.png'),
       url('../images/tablet/about/bg-milk.png');
     background-size: 340px 339px, contain;
     background-repeat: no-repeat;
-    background-position: left 35px top 281px, left 0 top 320px;
+    background-position: left 35px top 151px, left 0 top 170px;
 
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
@@ -35,15 +42,14 @@
         url('../images/tablet/about/bg-milk@2x.png');
     }
   }
-
   @include for-desktop {
-    padding-bottom: 73px;
+    min-height: 650px;
 
     background-image: url('../images/desktop/about/about.png'),
       url('../images/desktop/about/bg-milk.png');
-    background-size: 516px 516px, contain;
+    background-size: 516px 516px, 1282px 534px;
     background-repeat: no-repeat;
-    background-position: left 115px top 295px, left 0 top 342px;
+    background-position: left 112px top 170px, left 0px top 217px;
 
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
@@ -75,7 +81,8 @@
   flex-direction: column;
   align-items: flex-start;
 
-  width: 220px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
 
