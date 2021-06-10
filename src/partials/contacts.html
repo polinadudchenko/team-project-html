@@ -114,15 +114,15 @@
   </div>
 </section>
 
-<div class="location-backdrop is-hidden" data-location-modal>
-  <div class="location-modal">
+<div class="backdrop is-hidden" data-location-modal>
+  <div class="location-modal modal">
     <div class="location-modal__image">
       <img src="./images/location/ice-cream.webp" alt="ice-cream" width="100%" />
-    <button class="modal__close" data-location-modal-close>
-      <svg width="20" height="20">
-        <use href="./images/icons.svg#menu-close"></use>
-      </svg>
-    </button>
+      <button class="modal__close" data-location-modal-close>
+        <svg width="20" height="20">
+          <use href="./images/icons.svg#menu-close"></use>
+        </svg>
+      </button>
     </div>
 
     <p class="location-modal__text">You can find us here!</p>
@@ -159,14 +159,14 @@
   </div>
 </div>
 
-<div class="franchise-backdrop is-hidden" data-franchise-modal>
-  <div class="franchise-modal">
+<div class="backdrop is-hidden" data-franchise-modal>
+  <div class="franchise-modal modal">
     <button class="modal__close" data-franchise-modal-close>
       <svg width="20" height="20">
         <use href="./images/icons.svg#menu-close"></use>
       </svg>
     </button>
-    <p class="franchise-modal__title">Commercial concession agreement (franchise)</p>
+    <p class="modal__title">Commercial concession agreement (franchise)</p>
     <ol class="franchise-modal__contract-structure">
       <li class="franchise-modal__subtitle">
         Definition of terms
@@ -231,24 +231,24 @@
         </p>
       </li>
     </ol>
-      <label class="consent franchise-modal__consent">
-        <input class="consent__checkbox" type="checkbox" name="consent" id="consent" required />
-        <svg class="consent__check" width="16" height="15">
-          <use href="./images/icons.svg#icon-modal-check"></use>
-        </svg>
-        <span class="consent__unchecked"></span>
-        <span>
-          I agree to the newsletter and accept the
-          <a
-            class="consent__agreement"
-            href="https://i.kym-cdn.com/photos/images/original/001/526/890/131.png"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Terms and Conditions
-          </a>
-        </span>
-      </label>
+    <label class="consent franchise-modal__consent">
+      <input class="consent__checkbox" type="checkbox" name="consent" id="consent" required />
+      <svg class="consent__check" width="16" height="15">
+        <use href="./images/icons.svg#icon-modal-check"></use>
+      </svg>
+      <span class="consent__unchecked"></span>
+      <span>
+        I agree to the newsletter and accept the
+        <a
+          class="consent__agreement"
+          href="https://i.kym-cdn.com/photos/images/original/001/526/890/131.png"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Terms and Conditions
+        </a>
+      </span>
+    </label>
 
     <button class="button button--dark franchise-modal__button" type="submit">Send</button>
   </div>
