@@ -267,6 +267,8 @@
   background-color: #fff5f6;
   position: relative;
   z-index: 10;
+  max-height: 100vh;
+  overflow-y: auto;
 
   position: absolute;
   top: 50%;
@@ -392,6 +394,8 @@
   padding: 30px;
   position: relative;
   z-index: 2;
+  max-height: 100vh;
+  overflow-y: auto;
 
   position: absolute;
   top: 50%;
