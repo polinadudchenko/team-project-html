@@ -12,20 +12,19 @@
 
   opacity: 1;
 
-  transition: opacity $animation;
-}
-.is-hidden {
+  transition: transform $animation, opacity $animation,
+  visibility $animation,
+  box-shadow $animation;
+
+  &.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
-  transition: opacity $animation;
-
-  .modal {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0;
-  }
-}
+  
+  transition: transform $animation,opacity $animation,
+  visibility $animation,
+  box-shadow $animation;
+}}
 .modal {
   position: absolute;
   top: 50%;
@@ -45,8 +44,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform $animation, opacity $animation;
-
+ 
   @include for-desktop {
     max-width: 528px;
   }
