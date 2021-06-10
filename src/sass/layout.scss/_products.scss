@@ -246,7 +246,7 @@
     font-weight: 400;
     position:fixed;
     bottom:60px;
-    right:32px;
+    right:20px;
     z-index:9999;
     cursor:pointer;
     display: none;
@@ -257,12 +257,12 @@
         transition: box-shadow 0.5s, transform 0.5s;
     }
     @include for-tablet{
-        padding: 10px;
+        padding: 15px;
         font-size: 15px;
        
     }
     @include for-desktop{
-        padding: 25px;
+        padding: 20px;
         font-size: 25px;
         font-weight: 700;
     }
