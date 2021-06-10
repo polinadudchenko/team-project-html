@@ -15,8 +15,8 @@
   transition: transform $animation, opacity $animation,
   visibility $animation,
   box-shadow $animation;
-}
-.backdrop.is-hidden {
+
+  &.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -24,11 +24,7 @@
   transition: transform $animation,opacity $animation,
   visibility $animation,
   box-shadow $animation;
-  // .modal {
-  //   transform: translate(-50%, -50%) scale(0.9);
-  //   opacity: 0;
-  // }
-}
+}}
 .modal {
   position: absolute;
   top: 50%;
