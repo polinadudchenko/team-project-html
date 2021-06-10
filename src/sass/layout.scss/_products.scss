@@ -231,3 +231,40 @@
             height: 60%;
         }
 }
+#top {
+    padding: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    color: $accent-dark;
+    border: solid 1px;
+    border-color: $accent-dark;
+    transform: scale(1);
+    box-shadow: 0 0 5px 5px rgba(34, 60, 80, 0.2);
+    transition: box-shadow 0.5s, transform 0.5s;
+   
+    border-radius: 50px;
+    font-weight: 400;
+    position:fixed;
+    bottom:60px;
+    right:32px;
+    z-index:9999;
+    cursor:pointer;
+    display: none;
+    opacity: 1;
+    &:hover{
+        transform: scale(1.2);
+        box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
+        transition: box-shadow 0.5s, transform 0.5s;
+    }
+    @include for-tablet{
+        padding: 10px;
+        font-size: 15px;
+       
+    }
+    @include for-desktop{
+        padding: 25px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    }
+   
