@@ -13,8 +13,10 @@
 }
 
 .advantages__item {
-  &:not(:last-child) {
-    padding-bottom: 38px;
+  @include only-phone {
+    &:not(:last-child) {
+      margin-bottom: 38px;
+    }
   }
 }
 
