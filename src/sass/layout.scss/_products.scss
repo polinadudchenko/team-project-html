@@ -231,40 +231,38 @@
             height: 60%;
         }
 }
-#top {
-    padding: 10px;
-    font-size: 15px;
+button.up{
+	border:none;
+	outline:none;
+	padding:10px ;
+	border-radius:8px;
     background-color: transparent;
-    color: $accent-dark;
-    border: solid 1px;
-    border-color: $accent-dark;
+        color: $accent-dark;
+        border: solid 1px;
+         border-color: $accent-dark;
+	font-weight: bold;
+	position: fixed;
+	right: -100px;
+	bottom: 20px;
+	transition: all .5s ease;
+    cursor: pointer;
     transform: scale(1);
     box-shadow: 0 0 5px 5px rgba(34, 60, 80, 0.2);
     transition: box-shadow 0.5s, transform 0.5s;
-   
-    border-radius: 50px;
-    font-weight: 400;
-    position:fixed;
-    bottom:60px;
-    right:20px;
-    z-index:9999;
-    cursor:pointer;
-    display: none;
-    opacity: 1;
     &:hover{
-        transform: scale(1.2);
-        box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
-        transition: box-shadow 0.5s, transform 0.5s;
-    }
+                 transform: scale(1.2);
+                 box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
+                 transition: box-shadow 0.5s, transform 0.5s;
+            }
     @include for-tablet{
-        padding: 15px;
-        font-size: 15px;
-       
-    }
-    @include for-desktop{
-        padding: 20px;
-        font-size: 25px;
-        font-weight: 700;
-    }
-    }
-   
+               padding: 10px;
+             
+               
+           }
+            @include for-desktop{
+                padding:10px 20px;
+            
+            }}
+
+
+
