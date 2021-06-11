@@ -44,7 +44,15 @@
 
 .gallery__item {
   overflow: hidden;
-  border-radius: 22px;
+  border-radius: 7px;
+
+  @include for-tablet {
+    border-radius: 15px;
+  }
+
+  @include for-desktop {
+    border-radius: 20px;
+  }
 }
 
 .gallery__img {

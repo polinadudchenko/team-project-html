@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,18 +46,14 @@
     <include src="./partials/contacts.html"></include>
     <include src="./partials/footer.html"></include>
     <include src="./partials/modal.html"></include>
-
+    
     <script src="./index.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <script
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-
     <script src="./js/script.js"></script>
-
     <script src="./js/about-modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/buy-modal.js"></script>
@@ -70,7 +67,6 @@
         });
       })();
     </script>
-
     <script type="text/javascript">
       $(document).ready(function () {
         $('.button-animation').click(function () {
@@ -91,6 +87,24 @@
             .animate({ scrollTop: $(d).offset().top }, t);
         });
       });
-    </script>
+    </script> 
+    <script type="text/javascript">
+      mybutton = document.getElementById("top");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+  
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+          
+      }
+  </script>
+         
   </body>
 </html>

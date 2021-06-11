@@ -1,32 +1,47 @@
 .hero {
   background-color: $hero-bg;
-  // padding-bottom: 50px;
+
+
+  @include only-small-phone {
+    background-repeat: no-repeat;
+    background-size: 171px 410px, 100% 500px;
+    background-position: 85% bottom;
+    background-image: url('../images/mobile/hero/hero1.png'),
+      radial-gradient(circle at 70% 52%, #ffa5ba 54%, $hero-bg 54%);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/mobile/hero/hero1@2x.png'),
+        radial-gradient(circle at 70% 52%, #ffa5ba 54%, $hero-bg 54%);
+    }
+  }
+
+  @include only-phone {
+    background-repeat: no-repeat;
+    background-size: 171px 410px, 100% 500px;
+    background-position: 75% bottom;
+    background-image: url('../images/mobile/hero/hero1.png'),
+      radial-gradient(circle at 70% 52%, #ffa5ba 54%, $hero-bg 54%);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/mobile/hero/hero1@2x.png'),
+        radial-gradient(circle at 70% 52%, #ffa5ba 54%, $hero-bg 54%);
+    }
+  }
 }
 
 .hero__container {
   position: relative;
-  width: 100%;
   height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 480px;
 
   background-repeat: no-repeat;
-  background-size: 171px 410px, 100% 500px;
-  background-position: 85% bottom;
-  background-image: url('../images/mobile/hero/hero1.png'),
-    radial-gradient(circle at 70% 52%, #ffa5ba 54%, $hero-bg 54%);
-
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/mobile/hero/hero1@2x.png'),
-      radial-gradient(circle at 70% 52%, #ffa5ba 54%, $hero-bg 54%);
-  }
 
   @include for-tablet {
-    max-width: 768px;
     height: 400px;
 
     background-position: 58% bottom, 95% bottom, 35px 90%;
@@ -47,7 +62,6 @@
 
   @include for-desktop {
     height: 665px;
-    max-width: 1280px;
 
     background-position: 58% bottom, 90% bottom, 115px 90%;
     background-size: 236px 557px, 293px 232px, 188px 191px, 1280px 665px;
