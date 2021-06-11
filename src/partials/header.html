@@ -12,23 +12,17 @@
     <button
       type="button"
       class="main-nav__open-button"
+      id="open-button"
       aria-controls="main-nav__menu"
-      data-menu-button
     >
-      <svg class="main-nav__svg" aria-label="switcher mobile menu">
-        <use class="main-nav__open" href="./images/icons.svg#menu"></use>
-        <!-- <use class="main-nav__close" href="./images/icons.svg#menu-close"></use> -->
+      <svg class="main-nav__open" width="21px" height="14px">
+        <use href="./images/icons.svg#menu"></use>
       </svg>
     </button>
     <div class="main-nav__menu" id="main-nav__menu" data-menu>
-      <button
-        type="button"
-        class="main-nav__close-button"
-        aria-controls="main-nav__menu"
-        data-menu-button
-      >
-        <svg class="main-nav__svg" aria-label="switcher mobile menu">
-          <use class="main-nav__close" href="./images/icons.svg#menu-close"></use>
+      <button type="button" class="main-nav__close-button" aria-controls="main-nav__menu">
+        <svg class="main-nav__close" width="17px" height="17px">
+          <use href="./images/icons.svg#menu-close"></use>
         </svg>
       </button>
       <button type="button" class="button button--light main-nav__buy-button" data-buy-modal-open>
