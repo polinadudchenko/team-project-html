@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The best icecream</title>
-
+    
     <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png" />
@@ -27,7 +27,8 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -36,6 +37,7 @@
     />
   </head>
   <body>
+    
     <include src="./partials/header.html"></include>
     <include src="./partials/hero.html"></include>
     <include src="./partials/products.html"></include>
@@ -88,23 +90,78 @@
         });
       });
     </script> 
-    <script type="text/javascript">
-      mybutton = document.getElementById("top");
-      window.onscroll = function() {scrollFunction()};
-      function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              mybutton.style.display = "block";
-          } else {
-              mybutton.style.display = "none";
-          }
-      }
-  
-      function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-          
-      }
-  </script>
+
+    <script>
+      var $heightResize = $(window).height();
+$(window).resize(function () {
+    $heightResize = $(window).height();
+});
+
+
+var flagF = true;
+var flagClick = true;
+var scrolling = 0;
+var $selector = $('html, body'),
+	$buttonUpDown = $('button.up'),
+
+/* Определить, вверх или вниз*/
+// Текущее значение скролла
+	$scrollCurent = 0,
+// Предыдущее значение  
+	$scrollTemp = 0;
+
+//Скролл окна
+$(window).scroll(function () {
+    $scrollCurent = $selector.scrollTop();
+    // Появление кнопки
+	if(flagClick){$buttonUpDown.css({
+  	right: '20px'});
+	}
+  else if($scrollCurent > ($heightResize/3)){
+  	$buttonUpDown.css({right: '20px'});
+	}else{
+    $buttonUpDown.css({right: '-100px'});
+	}
+	// прокрутка скролла вверх
+    if($scrollTemp > $scrollCurent){
+
+	}
+	else{
+    	//Если крутим вниз то збиваем значения на дефолтные
+     		flagClick = false;
+        scrolling = 0;
+        flagF = true;
+        $buttonUpDown.text('Наверх');
+	}
+	// присваиваем значения, одно всегда будет больше
+    $scrollTemp = $scrollCurent;
+});
+//
+
+//Клик по кнопке верх-вниз
+$buttonUpDown.on('click', function (e) {
+	if(flagF){
+        scrolling = $selector.scrollTop();
+       $selector.animate({
+			scrollTop: 0
+		}, 500);
+        flagF = false;
+        flagClick = true;
+        flagClick = true;
+        e.target.textContent = 'Вниз';
+       // console.log("Клик по кнопке - вверх " + scrolling)
+
+	}else{
+        $selector.animate({
+            scrollTop: scrolling
+        }, 500);
+        flagF = true;
+        flagClick = true;
+        e.target.textContent = 'Наверх';
+        //console.log("Клик по кнопке - вниз "+scrolling);
+	}
+});
+    </script>
          
   </body>
 </html>
