@@ -68,30 +68,9 @@
     display: none;
   }
 
-  /*   &.is-open {
-    @include for-tablet {
-      right: 20px;
-    }
-  } */
-
   stroke: $accent-dark;
-
-  transition: visibility $animation, opacity $animation, stroke $animation;
-
-  .main-nav__menu.is-open & {
-    display: none;
-  }
 }
 
-/* .main-nav__open-button {
-  stroke: $accent-dark;
-
-  transition: visibility $animation, opacity $animation, stroke $animation;
-
-  .main-nav__menu.is-open & {
-    display: none;
-  }
-} */
 .main-nav__menu {
   display: flex;
   padding: 60px 0;
@@ -142,47 +121,15 @@
   background-color: transparent;
   cursor: pointer;
 
-  transition: right $animation;
-  /* stroke: #fff; */
-
-  /* @include for-tablet {
-    top: 30px;
-    right: 225px;
-  }*/
-
   @include for-desktop {
     display: none;
   }
-
-  /*  &.is-open {
-    @include for-tablet {
-      right: 20px;
-    }
-  } */
 }
 
-/* .main-nav__svg {
-  width: 21px;
-  height: 14px;
-
-  .main-nav__open-button.is-open & {
-    width: 17px;
-    height: 17px;
-  }
-} */
 .main-nav__close {
   stroke: $btn-light-color;
-
-  /* opacity: 0;
-  visibility: hidden; */
-
-  transition: visibility $animation, opacity $animation, stroke $animation;
-
-  /* .main-nav__open-button.is-open & {
-    opacity: 1;
-    visibility: visible;
-  } */
 }
+
 .site-nav {
   color: $white-text-color;
 
@@ -190,12 +137,14 @@
     display: flex;
   }
 }
+
 .site-nav__link {
   &:hover,
   &:focus {
     color: $accent-dark;
   }
 }
+
 .main-nav__buy-button {
   width: 210px;
   height: 44px;
