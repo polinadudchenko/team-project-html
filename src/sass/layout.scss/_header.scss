@@ -188,6 +188,10 @@
     display: none;
   }
 }
+
+.main-nav__menu.is-open ~ .main-nav__buy-button--right {
+  display: none;
+}
 .site-nav__item {
   padding: 12px 21px;
   border-top: 1px solid #e18298;

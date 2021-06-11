@@ -17,10 +17,20 @@
     >
       <svg class="main-nav__svg" aria-label="switcher mobile menu">
         <use class="main-nav__open" href="./images/icons.svg#menu"></use>
-        <use class="main-nav__close" href="./images/icons.svg#menu-close"></use>
+        <!-- <use class="main-nav__close" href="./images/icons.svg#menu-close"></use> -->
       </svg>
     </button>
     <div class="main-nav__menu" id="main-nav__menu" data-menu>
+      <button
+        type="button"
+        class="main-nav__open-button"
+        aria-controls="main-nav__menu"
+        data-menu-button
+      >
+        <svg class="main-nav__svg" aria-label="switcher mobile menu">
+          <use class="main-nav__close" href="./images/icons.svg#menu-close"></use>
+        </svg>
+      </button>
       <button type="button" class="button button--light main-nav__buy-button" data-buy-modal-open>
         Buy now
         <svg class="button__icon button__icon--dark" width="10" height="10">
@@ -50,7 +60,7 @@
     <button
       type="button"
       class="button button--light main-nav__buy-button--right"
-      data-buy-modal-open
+      data-buy-tablet-modal-open
     >
       Buy now
       <svg class="button__icon button__icon--dark" width="10" height="10">
