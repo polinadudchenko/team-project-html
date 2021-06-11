@@ -126,7 +126,7 @@
           flagClick = false;
           scrolling = 0;
           flagF = true;
-          $buttonUpDown.text('UP');
+          $buttonUpDown.text('Up');
         }
         // присваиваем значения, одно всегда будет больше
         $scrollTemp = $scrollCurent;
@@ -146,7 +146,7 @@
           flagF = false;
           flagClick = true;
           flagClick = true;
-          e.target.textContent = 'Вниз';
+          e.target.textContent = 'Down';
           // console.log("Клик по кнопке - вверх " + scrolling)
         } else {
           $selector.animate(
@@ -157,7 +157,7 @@
           );
           flagF = true;
           flagClick = true;
-          e.target.textContent = 'Наверх';
+          e.target.textContent = 'Up';
           //console.log("Клик по кнопке - вниз "+scrolling);
         }
       });
