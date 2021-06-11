@@ -1,6 +1,7 @@
 .hero {
   background-color: $hero-bg;
 
+
   @include only-small-phone {
     background-repeat: no-repeat;
     background-size: 171px 410px, 100% 500px;
